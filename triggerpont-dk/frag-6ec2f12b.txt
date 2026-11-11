@@ -1,0 +1,365 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+html{scroll-behavior:smooth;background:#060D1A}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.tp-pulse{animation:none!important}.tp-track{animation:none!important}}
+body{margin:0;background:#060D1A;color:#E2E8F0;font-family:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+.tp-wrap *{box-sizing:border-box}
+.tp-wrap{background:#060D1A;color:#E2E8F0;font-size:16px;line-height:1.6;overflow-x:hidden}
+.tp-in{max-width:1080px;margin:0 auto;padding:0 20px}
+.tp-narrow{max-width:760px;margin:0 auto}
+.tp-top{position:sticky;top:0;z-index:50;background:#DC2626;color:#fff;text-align:center;font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:9px 12px}
+.tp-sec{padding:64px 0}
+.tp-sec.tp-a{background:#060D1A}
+.tp-sec.tp-b{background:#091122;border-top:1px solid #1E293B;border-bottom:1px solid #1E293B}
+.tp-h1{font-weight:800;text-transform:uppercase;color:#fff;font-size:30px;line-height:1.15;text-align:center;margin:18px 0 18px}
+.tp-h2{font-weight:800;text-transform:uppercase;color:#fff;font-size:24px;line-height:1.2;text-align:center;margin:0 0 14px}
+.tp-grad{background:linear-gradient(90deg,#34D399,#6EE7B7);-webkit-background-clip:text;background-clip:text;color:transparent}
+.tp-kick{display:block;text-align:center;color:#34D399;font-weight:800;font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
+.tp-sub{text-align:center;color:#94A3B8;margin:0 auto 28px;max-width:640px}
+.tp-pill{display:flex;width:max-content;max-width:100%;margin:0 auto;align-items:center;gap:8px;border:1px solid rgba(16,185,129,.4);background:rgba(16,185,129,.1);color:#6EE7B7;border-radius:999px;padding:7px 16px;font-size:12px;font-weight:800;letter-spacing:.05em;text-transform:uppercase}
+.tp-box{background:rgba(30,41,59,.55);border:1px solid #1E293B;border-radius:16px;padding:16px 20px;text-align:center;color:#E2E8F0;max-width:640px;margin:0 auto 28px}
+.tp-frame{background:#0F172A;border:1px solid #1E293B;border-radius:18px;padding:10px;margin:0 auto;max-width:620px}
+.tp-frame img{display:block;width:100%;height:auto;border-radius:12px}
+.tp-p{color:#94A3B8;text-align:center;max-width:680px;margin:26px auto}
+.tp-p b{color:#fff}
+.tp-btn{display:block;width:100%;max-width:520px;margin:0 auto;text-align:center;text-decoration:none;background:#10B981;color:#020617;font-weight:900;font-size:16px;letter-spacing:.04em;text-transform:uppercase;border-radius:12px;padding:18px 18px;box-shadow:0 10px 30px rgba(16,185,129,.25)}
+.tp-btn.tp-buy{background:#00923F;color:#fff;box-shadow:0 10px 30px rgba(0,146,63,.3)}
+.tp-pulse{animation:tp-pulse 2.2s ease-in-out infinite}
+@keyframes tp-pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
+.tp-note{text-align:center;color:#94A3B8;font-size:13px;margin-top:12px}
+.tp-hr{border:0;border-top:1px solid #1E293B;margin:48px 0}
+.tp-marq{overflow:hidden;margin-top:28px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.tp-track{display:flex;gap:14px;width:max-content;animation:tp-marq 38s linear infinite}
+.tp-track img{width:220px;height:auto;border-radius:12px;border:1px solid #1E293B;display:block}
+@keyframes tp-marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.tp-cols{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.tp-card{background:#0F172A;border:1px solid #1E293B;border-radius:16px;padding:24px}
+.tp-card h3{font-weight:800;text-transform:uppercase;font-size:18px;margin:0 0 16px}
+.tp-no h3{color:#FDA4AF}.tp-no{border-color:rgba(220,38,38,.45);background:rgba(76,5,25,.35)}
+.tp-si h3{color:#6EE7B7}.tp-si{border-color:rgba(16,185,129,.45);background:rgba(6,78,59,.25)}
+.tp-list{list-style:none;margin:0;padding:0}
+.tp-list li{position:relative;padding:8px 0 8px 32px;color:#E2E8F0;border-bottom:1px solid rgba(51,65,85,.5)}
+.tp-list li:last-child{border-bottom:0}
+.tp-list li:before{position:absolute;left:0;top:8px;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800}
+.tp-x li:before{content:'✕';background:rgba(220,38,38,.2);color:#F87171}
+.tp-v li:before{content:'✓';background:rgba(16,185,129,.2);color:#34D399}
+.tp-prof{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.tp-prof div{background:#0F172A;border:1px solid #1E293B;border-left:4px solid #10B981;border-radius:0;padding:16px 18px;font-weight:700;font-size:14px;text-transform:uppercase;color:#E2E8F0;line-height:1.45}
+.tp-timer{display:flex;justify-content:center;align-items:center;gap:10px;margin:22px 0 28px}
+.tp-timer .tp-t{background:#0F172A;border:1px solid #334155;border-radius:14px;min-width:92px;padding:12px 8px;text-align:center}
+.tp-timer b{display:block;font-size:40px;font-weight:800;color:#fff;line-height:1}
+.tp-timer small{font-size:11px;letter-spacing:.12em;color:#94A3B8;font-weight:700}
+.tp-timer .tp-dots{font-size:34px;font-weight:800;color:#F87171}
+.tp-wins{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.tp-win{background:#0F172A;border:1px solid #1E293B;border-radius:16px;padding:20px}
+.tp-win .tp-ic{width:38px;height:38px;border-radius:50%;background:rgba(16,185,129,.15);color:#34D399;display:flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:12px}
+.tp-win p{margin:0;color:#E2E8F0;font-size:15px}
+.tp-get{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
+.tp-bon{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.tp-bcard{background:#0F172A;border:1px solid #1E293B;border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.tp-bcard img{width:100%;height:auto;display:block}
+.tp-bcard .tp-bb{padding:20px}
+.tp-tag{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;font-size:12px;font-weight:800;text-transform:uppercase}
+.tp-tag span:first-child{color:#94A3B8;text-decoration:line-through}
+.tp-tag span:last-child{background:#10B981;color:#020617;border-radius:999px;padding:3px 10px}
+.tp-bcard h3{margin:0 0 6px;color:#fff;font-size:18px;font-weight:800}
+.tp-bcard h4{margin:0 0 12px;color:#34D399;font-size:12px;letter-spacing:.06em;font-weight:800;text-transform:uppercase}
+.tp-bcard p{color:#94A3B8;font-size:14px;margin:0 0 12px}
+.tp-bcard .tp-list li{font-size:14px;padding:6px 0 6px 28px}
+.tp-bcard .tp-list li:before{width:18px;height:18px;font-size:10px;top:7px}
+#tp-offer{scroll-margin-top:24px}
+.tp-offer{max-width:620px;margin:0 auto;background:#0F172A;border:2px solid #10B981;border-radius:22px;overflow:hidden;box-shadow:0 20px 60px rgba(16,185,129,.15)}
+.tp-ribbon{background:#10B981;color:#020617;text-align:center;font-weight:900;font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:10px}
+.tp-ob{padding:26px 24px}
+.tp-ob h3{text-align:center;color:#fff;font-weight:800;font-size:24px;text-transform:uppercase;margin:0 0 4px}
+.tp-ob .tp-mini{text-align:center;color:#34D399;font-weight:800;font-size:12px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:18px}
+.tp-price{text-align:center;margin:22px 0 6px}
+.tp-old{color:#94A3B8;font-size:16px}
+.tp-old s{color:#F87171}
+.tp-save{display:inline-block;margin-left:8px;background:rgba(220,38,38,.18);color:#FDA4AF;border-radius:999px;padding:3px 10px;font-size:12px;font-weight:800}
+.tp-big{display:block;font-family:Georgia,'Times New Roman',serif;font-weight:700;font-size:64px;line-height:1.05;color:#fff;margin:8px 0 2px}
+.tp-once{text-align:center;color:#94A3B8;font-size:13px;margin-bottom:20px}
+.tp-bonbox{border:2px dashed rgba(16,185,129,.55);border-radius:14px;padding:14px 16px;margin:16px 0 4px;background:rgba(16,185,129,.06)}
+.tp-bonbox p{margin:4px 0;color:#E2E8F0;font-size:14px}
+.tp-bonbox .tp-tot{color:#6EE7B7;font-weight:800;margin-top:8px}
+.tp-trust{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 18px;color:#94A3B8;font-size:12px;margin-top:14px}
+.tp-gar{background:#FFFDF9;color:#0F172A;padding:64px 0;border-top:1px solid #E2E8F0}
+.tp-gar .tp-gin{display:flex;gap:28px;align-items:center;max-width:820px;margin:0 auto}
+.tp-seal{flex:0 0 150px;height:150px;border-radius:50%;background:#10B981;color:#020617;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-weight:800;border:6px double #fff;box-shadow:0 0 0 4px #10B981}
+.tp-seal small{font-size:10px;letter-spacing:.08em}
+.tp-seal b{font-size:30px;line-height:1}
+.tp-gar h2{color:#0F172A;text-align:left;font-weight:800;text-transform:uppercase;font-size:24px;margin:0 0 10px}
+.tp-gar p{margin:0;color:#334155}
+.tp-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.tp-step{background:#0F172A;border:1px solid #1E293B;border-radius:16px;padding:20px}
+.tp-step .tp-n{font-size:30px;font-weight:800;color:#10B981;line-height:1}
+.tp-step h3{color:#fff;font-size:16px;font-weight:800;margin:10px 0 6px}
+.tp-step p{color:#94A3B8;font-size:14px;margin:0 0 12px}
+.tp-step span{display:inline-block;font-size:11px;font-weight:800;color:#6EE7B7;background:rgba(16,185,129,.12);border-radius:999px;padding:3px 10px;text-transform:uppercase;letter-spacing:.05em}
+.tp-faq details{background:#0F172A;border:1px solid #1E293B;border-radius:14px;margin-bottom:10px}
+.tp-faq summary{cursor:pointer;list-style:none;padding:16px 46px 16px 18px;font-weight:700;color:#fff;position:relative}
+.tp-faq summary::-webkit-details-marker{display:none}
+.tp-faq summary:after{content:'+';position:absolute;right:18px;top:12px;font-size:22px;color:#34D399}
+.tp-faq details[open] summary:after{content:'–'}
+.tp-faq details p{margin:0;padding:0 18px 16px;color:#94A3B8}
+.tp-final{background:linear-gradient(180deg,#091122 0%,#040812 100%);padding:72px 0;text-align:center}
+.tp-final .tp-btn{border-radius:16px}
+.tp-foot{background:#030712;border-top:1px solid #0F172A;color:#64748B;font-size:12px;padding:44px 0;text-align:center}
+.tp-logo{width:44px;height:44px;border-radius:12px;background:#10B981;color:#020617;font-weight:900;display:flex;align-items:center;justify-content:center;margin:0 auto 10px}
+.tp-foot h4{color:#E2E8F0;font-size:13px;letter-spacing:.08em;margin:0 0 22px;text-transform:uppercase}
+.tp-foot h5{color:#94A3B8;font-size:12px;letter-spacing:.08em;margin:0 0 8px;text-transform:uppercase}
+.tp-foot p{max-width:720px;margin:0 auto 18px;line-height:1.7}
+@media(min-width:900px){.tp-h1{font-size:46px}.tp-h2{font-size:34px}.tp-track img{width:260px}}
+@media(max-width:820px){.tp-cols,.tp-get{grid-template-columns:1fr}.tp-wins,.tp-bon{grid-template-columns:1fr}.tp-steps{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.tp-sec{padding:48px 0}.tp-in{padding:0 16px}.tp-h1{font-size:27px}.tp-h2{font-size:22px}.tp-prof,.tp-steps{grid-template-columns:1fr}.tp-big{font-size:56px}.tp-gar .tp-gin{flex-direction:column;text-align:center}.tp-gar h2{text-align:center}.tp-timer .tp-t{min-width:80px}.tp-timer b{font-size:34px}.tp-card{padding:20px}.tp-ob{padding:22px 16px}}
+@media(max-width:380px){.tp-h1{font-size:24px}.tp-h2{font-size:20px}.tp-btn{font-size:14px;padding:16px 12px}.tp-big{font-size:48px}.tp-top{font-size:11px}.tp-pill{font-size:10px;padding:6px 12px}.tp-track img{width:180px}}
+</style>
+<div class="tp-wrap">
+<div class="tp-top">Særtilbud kun i dag — <span id="tp-date">11. november 2026</span></div>
+<section class="tp-sec tp-a" style="padding-top:32px">
+<div class="tp-in">
+<div class="tp-pill">🔒 100 % sikker checkout</div>
+<h1 class="tp-h1">på 100+ visuelle kort <span class="tp-grad">over refereret smerte</span> og triggerpunkter</h1>
+<div class="tp-box">Stop med at terpe udenad. Se muskler, triggerpunkter og smertemønstre med ét blik – på få sekunder.</div>
+<div class="tp-frame"><img alt="100+ visuelle kort: refereret smerte og triggerpunkter" loading="eager" src="https://recursos-pdf-hub.github.io/entregas-3/triggerpont-dk/landing-img/pg-usa-1.jpg"/></div>
+<p class="tp-p">Et intuitivt, visuelt opslagsbibliotek, der viser <b>muskler, mulige triggerpunkter og typiske smertemønstre</b>, organiseret efter kropsregion. Slå dem op på få sekunder i klinikken, under studiet eller til eksamen – slut med at spilde timer på at bladre i tykke lærebøger og spredte noter.</p>
+<a class="tp-btn tp-pulse" href="#tp-offer">Få øjeblikkelig adgang nu ↓</a>
+<div class="tp-note">✉️ Øjeblikkelig adgang via e-mail</div>
+<hr class="tp-hr"/>
+<h2 class="tp-h2">Se præcis, hvad du får.</h2>
+<div class="tp-frame" style="max-width:520px"><img alt="Visuelle kort på tablet og på papir" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-3/triggerpont-dk/landing-img/pg-usa-2.jpg"/></div>
+<div class="tp-marq"><div class="tp-track">
+<img alt="Eksempel på et kort" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-3/triggerpont-dk/landing-img/pg1.jpg"/><img alt="Eksempel på et kort" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-3/triggerpont-dk/landing-img/pg2.jpg"/><img alt="Eksempel på et kort" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-3/triggerpont-dk/landing-img/pg3.jpg"/><img alt="Eksempel på et kort" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-3/triggerpont-dk/landing-img/pg4.jpg"/><img alt="Eksempel på et kort" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-3/triggerpont-dk/landing-img/pg5.jpg"/>
+<img alt="" aria-hidden="true" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-3/triggerpont-dk/landing-img/pg1.jpg"/><img alt="" aria-hidden="true" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-3/triggerpont-dk/landing-img/pg2.jpg"/><img alt="" aria-hidden="true" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-3/triggerpont-dk/landing-img/pg3.jpg"/><img alt="" aria-hidden="true" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-3/triggerpont-dk/landing-img/pg4.jpg"/><img alt="" aria-hidden="true" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-3/triggerpont-dk/landing-img/pg5.jpg"/>
+</div></div>
+</div>
+</section>
+<section class="tp-sec tp-a" style="background:#060D1A;padding-top:16px">
+<div class="tp-in">
+<h2 class="tp-h2">Fra besværlig søgning til hurtig, visuel viden</h2>
+<p class="tp-sub">Sammenlign din hverdag før og efter Triggerpunktatlas.</p>
+<div class="tp-cols">
+<div class="tp-card tp-no"><h3>Uden de visuelle kort</h3><ul class="tp-list tp-x">
+<li>Information spredt over snesevis af tunge lærebøger, slides og noter.</li>
+<li>Du har hele tiden svært ved at huske, hvilken muskel der hører til hvilket smerteområde.</li>
+<li>Værdifuld tid spildt på at lede efter anatomitegninger under eller mellem konsultationerne.</li>
+<li>Det er frustrerende at forklare myofasciale smerteudbredelser klart og enkelt for dine patienter.</li>
+<li>Det er let at blande sammen, hvor patienten mærker smerten, og hvilken muskel der typisk står bag smertemønstret.</li>
+<li>Timer brugt på at skrive dine egne noter og oversigter helt fra bunden.</li>
+<li>Nervøsitet før praktiske palpationsprøver og klinisk praktik.</li>
+<li>Tunge lærebøger, som er umulige at slå hurtigt op i på mobilen.</li>
+<li>Stress, spildt tid og tilbagevendende usikkerhed i undersøgelsen.</li>
+</ul></div>
+<div class="tp-card tp-si"><h3>Med de visuelle kort</h3><ul class="tp-list tp-v">
+<li>Over 100 anatomiske kort, systematisk organiseret efter kropsregion.</li>
+<li>Lynhurtigt visuelt opslag til direkte klinisk brug.</li>
+<li>Muskler, triggerpunkter og smerteudbredelse, vist krystalklart.</li>
+<li>Tydelige visuelle kendetegn for palpation, stramme bånd og områder med refereret smerte.</li>
+<li>Logisk opbygning: hoved, halshvirvelsøjle, overekstremitet, ryg, bækken, ben og fod.</li>
+<li>100 % digitalt materiale, som du kan åbne med det samme på mobil, tablet eller computer.</li>
+<li>Hurtig repetition før eksamen, praktiske prøver, klinisk praktik eller svære cases.</li>
+<li>Et livslangt opslagsbibliotek lige ved hånden, med 300 DPI-filer optimeret til print.</li>
+<li>Præcision, klinisk sikkerhed og mange sparede timer.</li>
+</ul></div>
+</div>
+</div>
+</section>
+<section class="tp-sec tp-b">
+<div class="tp-in">
+<span class="tp-kick">Behandlere og studerende</span>
+<h2 class="tp-h2">Triggerpunktatlas er til dig, hvis:</h2>
+<div class="tp-prof" style="margin-top:26px">
+<div>Du er fysioterapeut, osteopat, kiropraktor, massør, træner eller studerende inden for sundhed.</div>
+<div>Du har svært ved at huske så mange komplekse myofasciale smertemønstre.</div>
+<div>Du har nogle gange svært ved at koble smerteområdet til de muskler, der typisk hænger sammen med smertemønstret.</div>
+<div>Du spilder tid på at slå op i flere forskellige lærebøger og PDF’er, når du studerer eller behandler.</div>
+<div>Mange timer brugt på at lave dine egne repetitionsark, resuméer og anatomiskitser.</div>
+<div>Du vil have et visuelt værktøj i høj kvalitet, så du kan forklare refereret smerte tydeligt for dine patienter lige ved briksen.</div>
+<div>Du vil have øjeblikkelig adgang til kortene på mobil, tablet eller computer, uanset hvor du er.</div>
+<div>Du er ny inden for bevægeapparatet eller forbereder dig til kliniske eksaminer, praktiske prøver og klinisk praktik.</div>
+</div>
+<p class="tp-p">Hvis du kan genkende dig selv i mindst to af punkterne, er Triggerpunktatlas lavet netop for at gøre din kliniske hverdag og dine studier lettere.</p>
+</div>
+</section>
+<section class="tp-sec tp-a">
+<div class="tp-in tp-narrow">
+<span class="tp-kick" style="color:#F87171">Begrænset introduktionspris</span>
+<h2 class="tp-h2">Hvor mange timer mere vil du bruge på at lede i spredte lærebøger?</h2>
+<p class="tp-sub" style="margin-bottom:0">Udnyt den tidsbegrænsede introduktionspris</p>
+<div aria-live="polite" class="tp-timer"><div class="tp-t"><b id="tp-mm">15</b><small>MINUTTER</small></div><span class="tp-dots">:</span><div class="tp-t"><b id="tp-ss">00</b><small>SEKUNDER</small></div></div>
+<a class="tp-btn tp-buy" href="#tp-offer">Få øjeblikkelig adgang, og brug det allerede i dag ↓</a>
+<div class="tp-note">Øjeblikkelig adgang efter bekræftelse • Direkte download</div>
+</div>
+</section>
+<section class="tp-sec tp-b">
+<div class="tp-in">
+<span class="tp-kick">Det får du ud af det i praksis</span>
+<h2 class="tp-h2">Sådan ændrer din hverdag i klinikken sig</h2>
+<div class="tp-wins" style="margin-top:26px">
+<div class="tp-win"><div class="tp-ic">1</div><p>Al vigtig klinisk information samlet ét sted: skarpe opslagskort mellem konsultationerne.</p></div>
+<div class="tp-win"><div class="tp-ic">2</div><p>Spar værdifuld tid: slut med at grave i tykke lærebøger for at slå en muskel eller et smertemønster op.</p></div>
+<div class="tp-win"><div class="tp-ic">3</div><p>Ud fra illustrationerne forstår du nemt, hvor de almindelige triggerpunkter sidder, og hvordan de refererede smertemønstre viser sig.</p></div>
+<div class="tp-win"><div class="tp-ic">4</div><p>Som hurtigt visuelt opslag gennemgår du smertemønstret og de anatomiske kendetegn på få sekunder.</p></div>
+<div class="tp-win"><div class="tp-ic">5</div><p>Du lærer meget hurtigere visuelt: alt er organiseret efter kropsregion, hvilket gør atlasset ekstremt praktisk.</p></div>
+</div>
+<div class="tp-marq"><div class="tp-track" style="animation-duration:44s">
+<img alt="Eksempel på et kort" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-3/triggerpont-dk/landing-img/pg3.jpg"/><img alt="Eksempel på et kort" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-3/triggerpont-dk/landing-img/pg4.jpg"/><img alt="Eksempel på et kort" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-3/triggerpont-dk/landing-img/pg5.jpg"/><img alt="Eksempel på et kort" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-3/triggerpont-dk/landing-img/pg1.jpg"/><img alt="Eksempel på et kort" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-3/triggerpont-dk/landing-img/pg2.jpg"/>
+<img alt="" aria-hidden="true" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-3/triggerpont-dk/landing-img/pg3.jpg"/><img alt="" aria-hidden="true" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-3/triggerpont-dk/landing-img/pg4.jpg"/><img alt="" aria-hidden="true" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-3/triggerpont-dk/landing-img/pg5.jpg"/><img alt="" aria-hidden="true" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-3/triggerpont-dk/landing-img/pg1.jpg"/><img alt="" aria-hidden="true" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-3/triggerpont-dk/landing-img/pg2.jpg"/>
+</div></div>
+</div>
+</section>
+<section class="tp-sec tp-a">
+<div class="tp-in">
+<span class="tp-kick">Øjeblikkelig adgang efter bestilling</span>
+<h2 class="tp-h2">Det får du</h2>
+<div class="tp-get" style="margin-top:26px">
+<ul class="tp-list tp-v">
+<li>Over 100 visuelle kort over refereret smerte og triggerpunkter.</li>
+<li>Systematisk organiseret efter anatomisk kropsregion.</li>
+<li>Detaljerede kort over hoved, ansigt og nakke.</li>
+<li>Kort over skulder, overarm, underarm og hånd.</li>
+<li>Kort over brysthvirvelsøjle og lænd.</li>
+<li>Kort over bækken, hofte og glutealmuskler.</li>
+<li>Kort over lår, knæ, underben, ankel og fod.</li>
+<li>Præcis visuel identifikation af de vigtigste muskler.</li>
+<li>Refererede smertemønstre vist på 3D-anatomiske modeller.</li>
+<li>Visuelle markeringer af knoglepunkter og palpationslinjer.</li>
+<li>Klinisk indeks, så du finder enhver muskel på under 10 sekunder.</li>
+<li>Interaktive digitale PDF-filer i ultra-HD, kalibreret til print.</li>
+<li>100 % kompatibelt med mobil, tablet og computer.</li>
+</ul>
+<div class="tp-frame"><img alt="Det komplette kortbibliotek" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-3/triggerpont-dk/landing-img/pg-usa-1.jpg"/></div>
+</div>
+</div>
+</section>
+<section class="tp-sec tp-b">
+<div class="tp-in">
+<span class="tp-kick">Og det er ikke alt … du får også</span>
+<h2 class="tp-h2">3 eksklusive gratis bonusser (værdi 350 kr)</h2>
+<div class="tp-bon" style="margin-top:26px">
+<div class="tp-bcard"><img alt="Bonus 1: Skemaer til Hurtig Muskelvurdering" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-3/triggerpont-dk/landing-img/b1-pg.jpg"/><div class="tp-bb">
+<div class="tp-tag"><span>Værdi 105 kr</span><span>Gratis</span></div>
+<h3>Bonus 1 · Skemaer til Hurtig Muskelvurdering</h3>
+<h4>Kliniske undersøgelsesskemaer, der kan printes eller udfyldes på tablet</h4>
+<p>Klar-til-brug kliniske skabeloner, så du på få sekunder kan registrere smerteområder, smerteintensitet (VAS-skala), provokerende bevægelser, myofascial anamnese og kliniske fund. Strukturér dine undersøgelser med fuld sikkerhed.</p>
+<ul class="tp-list tp-v"><li>Vurdering af muskler og sener, organiseret efter kropsregion</li><li>Visuel analog skala (VAS) for smerteintensitet</li><li>Tjekliste til palpation af stramme bånd og triggerpunkter</li><li>Interaktivt digitalt format og A4 til print</li></ul>
+</div></div>
+<div class="tp-bcard"><img alt="Bonus 2: Visuel Guide til Palpationsanatomi" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-3/triggerpont-dk/landing-img/b2-pg.jpg"/><div class="tp-bb">
+<div class="tp-tag"><span>Værdi 125 kr</span><span>Gratis</span></div>
+<h3>Bonus 2 · Visuel Guide til Palpationsanatomi</h3>
+<h4>Illustreret atlas over knoglepunkter og muskelforløb</h4>
+<p>En rigt illustreret guide med tydelige knoglepunkter, trækretninger og anbefalede håndplaceringer, så du kan finde muskler, sener og triggerpunkter i den daglige praksis uden tøven.</p>
+<ul class="tp-list tp-v"><li>Kliniske fotos med indtegnede anatomiske kendetegn</li><li>Anbefalede håndplaceringer for hver muskelgruppe</li><li>Typiske palpationsfejl, du skal undgå</li><li>Ideelt til hurtig repetition før klinikken eller eksamen</li></ul>
+</div></div>
+<div class="tp-bcard"><img alt="Bonus 3: Undervisningsplakater i Høj Opløsning til Klinikken" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-3/triggerpont-dk/landing-img/b3-pg.jpg"/><div class="tp-bb">
+<div class="tp-tag"><span>Værdi 120 kr</span><span>Gratis</span></div>
+<h3>Bonus 3 · Undervisningsplakater i Høj Opløsning til Klinikken</h3>
+<h4>Undervisningsplakater, der tydeligt viser patienten, hvor smerten kommer fra</h4>
+<p>Plakater i meget høj opløsning (300 DPI), som du kan printe og hænge op i klinikken eller behandlingsrummet. De viser tydeligt, hvordan smerter i armen ofte kan stamme fra strukturer i nakken eller skulderen.</p>
+<ul class="tp-list tp-v"><li>Professionel opløsning på 300 DPI i A3/A2</li><li>Rent, æstetisk medicinsk design, der løfter klinikkens professionelle udtryk</li><li>Giver straks bedre forståelse og compliance hos patienten</li><li>Indeholder de 6 hyppigste refererede smertemønstre</li></ul>
+</div></div>
+</div>
+</div>
+</section>
+<section class="tp-sec tp-a" id="tp-offer">
+<div class="tp-in">
+<span class="tp-kick" style="color:#F87171">⏰ Sidste chance – begrænset tilbud i dag</span>
+<h2 class="tp-h2">Den Komplette Deluxe-pakke</h2>
+<p class="tp-sub">Øjeblikkelig digital adgang efter bekræftelse • 7 dages pengene-tilbage-garanti</p>
+<div class="tp-offer">
+<div class="tp-ribbon">🔥 Introduktionstilbud · kun i dag</div>
+<div class="tp-ob">
+<h3>Komplet Deluxe-pakke</h3>
+<div class="tp-mini">Triggerpunktatlas · 100+ Visuelle Kort</div>
+<div class="tp-frame" style="padding:6px;margin-bottom:18px"><img alt="Triggerpunktatlas – Komplet Deluxe-pakke" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-3/triggerpont-dk/landing-img/pg-usa-1.jpg"/></div>
+<ul class="tp-list tp-v">
+<li>📚 Hele biblioteket: 100+ detaljerede visuelle kort</li>
+<li>🧭 Alle kropsregioner: hoved, nakke, skulder, ryg, bækken, underekstremitet</li>
+<li>🔎 Alfabetisk klinisk indeks og symptomsøger på 10 sekunder</li>
+<li>📱 Optimeret til mobil og klar til print i 300 DPI</li>
+<li>♾️ Øjeblikkelig adgang og gratis opdateringer for livet</li>
+</ul>
+<div class="tp-bonbox">
+<p>🎁 Bonus 1: Skemaer til Hurtig Muskelvurdering</p>
+<p>🎁 Bonus 2: Visuel Guide til Palpationsanatomi</p>
+<p>🎁 Bonus 3: Undervisningsplakater i Høj Opløsning til Klinikken</p>
+<p class="tp-tot">Samlet bonusværdi: 350 kr – gratis til dig i dag</p>
+</div>
+<div class="tp-price">
+<div class="tp-old"><s>{{original_price}}</s> normalpris <span class="tp-save">Spar {{savings}}</span></div>
+<span class="tp-big">{{price}}</span>
+</div>
+<div class="tp-once">Sikker engangsbetaling · Livslang adgang</div>
+<a class="tp-btn tp-buy tp-pulse" href="/checkout">Få Den Komplette Deluxe-pakke – {{price}}</a>
+<div class="tp-trust"><span>🔒 100 % SSL-krypteret betaling</span><span>⚡ Øjeblikkelig levering på e-mail</span><span>🛡️ 7 dages garanti</span></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tp-gar">
+<div class="tp-in"><div class="tp-gin">
+<div class="tp-seal"><small>100 % TILFREDSHED</small><b>7 DAGE</b><small>GARANTI</small></div>
+<div><h2>Ubetinget 7 dages garanti</h2>
+<p>Du er dækket af en fuld, ubetinget 7 dages garanti. Hvis du synes, at det visuelle atlas ikke lever op til dine forventninger i studiet eller klinikken, så giv os besked inden for perioden. Du får hurtigt hele beløbet tilbage – uden besvær og uden forklaringer.</p></div>
+</div></div>
+</section>
+<section class="tp-sec tp-a">
+<div class="tp-in">
+<h2 class="tp-h2">Bestil nu, og få øjeblikkelig adgang</h2>
+<p class="tp-sub">En nem, hurtig og sikker proces i 4 enkle trin.</p>
+<div class="tp-steps">
+<div class="tp-step"><div class="tp-n">01</div><h3>Klik på knappen</h3><p>Vælg Den Komplette Deluxe-pakke ({{price}}).</p><span>Klar på 1 minut</span></div>
+<div class="tp-step"><div class="tp-n">02</div><h3>100 % sikker betaling</h3><p>Betal sikkert via 256-bit SSL-krypteret checkout (betalingskort, Apple Pay, Google Pay).</p><span>Klar på 1 minut</span></div>
+<div class="tp-step"><div class="tp-n">03</div><h3>Øjeblikkelig levering</h3><p>Inden for 60 sekunder får du dit personlige, sikre downloadlink på e-mail.</p><span>Klar på 1 minut</span></div>
+<div class="tp-step"><div class="tp-n">04</div><h3>Kan bruges klinisk med det samme</h3><p>Bladr i kortene med det samme på mobil eller tablet, eller print plakaterne i høj opløsning til dit behandlingsrum.</p><span>Klar på 1 minut</span></div>
+</div>
+</div>
+</section>
+<section class="tp-sec tp-b">
+<div class="tp-in tp-narrow">
+<span class="tp-kick">Klare svar</span>
+<h2 class="tp-h2">Ofte stillede spørgsmål</h2>
+<p class="tp-sub">Alt, hvad du skal vide, før du bestiller de visuelle kort.</p>
+<div class="tp-faq">
+<details><summary>Skal jeg have erfaring med manuel behandling eller myofasciale triggerpunkter i forvejen?</summary><p>Slet ikke. Kortene er bygget op i to lag: intuitiv visuel klarhed for studerende og begyndere (farvekodede anatomiske kendetegn og tydeligt markerede smertemønstre) og avanceret klinisk præcision for erfarne behandlere (præcis innervation, udspring og tilhæftning samt målrettede palpationsanvisninger).</p></details>
+<details><summary>Er materialet egnet til studerende inden for sundhed og fysioterapi?</summary><p>Ja, det er det ideelle repetitionsværktøj for studerende inden for fysioterapi, osteopati, kiropraktik, medicin, idræt og massage. Du sparer hundredvis af timer på at lave resuméer af tunge lærebøger og forbereder dig effektivt til praktiske palpationsprøver og klinisk praktik.</p></details>
+<details><summary>Er indholdet digitalt eller trykt?</summary><p>100 % digitalt materiale med øjeblikkelig adgang som interaktive PDF-filer i meget høj opløsning (300 DPI). Hav det med overalt på mobil, tablet eller computer, og print de kort, du vil bruge i klinikken.</p></details>
+<details><summary>Hvordan får jeg adgang efter bestillingen?</summary><p>Så snart din betaling er gennemført, får du straks en bekræftelse på e-mail med dit personlige, sikre adgangslink. På under 60 sekunder kan du begynde at bladre i dine kort.</p></details>
+<details><summary>Er adgangen virkelig livslang?</summary><p>Ja! Med Den Komplette Deluxe-pakke får du ubegrænset, livslang adgang til hele biblioteket uden abonnement eller løbende betaling. Alle fremtidige opdateringer og nye kort er inkluderet helt gratis.</p></details>
+<details><summary>Kan jeg printe anatomikortene til min klinik?</summary><p>Helt sikkert! Alle PDF-filer er lavet i knivskarp høj opløsning på 300 DPI. Du kan printe dem i A4 til din mappe eller i større A3/A2-format som vægplakater til dit behandlingsrum.</p></details>
+<details><summary>Erstatter materialet en godkendt uddannelse?</summary><p>Nej. Dette visuelle atlas er et undervisnings- og opslagsværk, der skal styrke din viden og gøre din daglige praksis lettere. Det erstatter ikke en uddannelse, en autorisation eller en formel diagnostisk træning.</p></details>
+<details><summary>Viser kortene den præcise årsag til enhver patients smerter?</summary><p>Kortene gengiver nøjagtigt de myofasciale refererede smertemønstre, der er beskrevet i faglitteraturen (Travell og Simons’ grundværk). Patientens smerter skal dog altid vurderes med en grundig anamnese og differentialdiagnostik, så røde flag udelukkes.</p></details>
+<details><summary>Hvordan fungerer pengene-tilbage-garantien?</summary><p>Du er dækket af en ubetinget 7 dages pengene-tilbage-garanti. Hvis materialet af en eller anden grund ikke lever op til dine forventninger, så giv os blot besked, og du får straks hele beløbet tilbage – uden spørgsmål.</p></details>
+</div>
+</div>
+</section>
+<section class="tp-final">
+<div class="tp-in tp-narrow">
+<span class="tp-kick">Løft din kliniske praksis</span>
+<h2 class="tp-h2">Kom i gang nu</h2>
+<p class="tp-sub">Øjeblikkelig digital adgang til hele biblioteket med over 100 visuelle kort over refereret smerte og triggerpunkter.</p>
+<a class="tp-btn" href="#tp-offer">Få Deluxe-pakken ({{price}}) ↓</a>
+<div class="tp-note">Se tilbuddet</div>
+<div class="tp-trust"><span>🔒 256-bit krypteret checkout</span><span>🛡️ 7 dages pengene-tilbage-garanti</span><span>✉️ Øjeblikkelig levering på e-mail</span></div>
+</div>
+</section>
+<footer class="tp-foot">
+<div class="tp-in">
+<div class="tp-logo">TP</div>
+<h4>Triggerpunktatlas: Refereret Smerte og Triggerpunkter</h4>
+<h5>Juridisk og lægefaglig ansvarsfraskrivelse</h5>
+<p>Dette anatomiske studie- og opslagsmateriale er udviklet til efteruddannelse, repetition for studerende, klinisk opslag og patientundervisning. Det udgør ikke individuel lægefaglig rådgivning, stiller ikke diagnoser og erstatter ikke en undersøgelse hos en autoriseret sundhedsprofessionel. Brugen af manuelle behandlingsteknikker og palpation er den enkelte behandlers eget ansvar og skal holdes inden for vedkommendes faglige og juridiske kompetenceområde.</p>
+<p>© 2026 Triggerpunktatlas. Alle rettigheder forbeholdes. Lavet til sundhedsprofessionelle.</p>
+</div>
+</footer>
+</div>
+<script>
+(function(){
+ try{var d=new Date(),m=['januar','februar','marts','april','maj','juni','juli','august','september','oktober','november','december'];var el=document.getElementById('tp-date');if(el)el.textContent=d.getDate()+'. '+m[d.getMonth()]+' '+d.getFullYear();}catch(e){}
+ var mm=document.getElementById('tp-mm'),ss=document.getElementById('tp-ss');if(!mm||!ss)return;
+ var end;try{end=parseInt(localStorage.getItem('tp_end')||'0',10);}catch(e){end=0}
+ var now=Date.now();if(!end||end<now){end=now+15*60*1000;try{localStorage.setItem('tp_end',String(end));}catch(e){}}
+ function tick(){var r=Math.max(0,end-Date.now());if(r===0){end=Date.now()+15*60*1000;try{localStorage.setItem('tp_end',String(end));}catch(e){}r=15*60*1000;}var s=Math.floor(r/1000);mm.textContent=String(Math.floor(s/60)).padStart(2,'0');ss.textContent=String(s%60).padStart(2,'0');}
+ tick();setInterval(tick,1000);
+})();
+</script>
