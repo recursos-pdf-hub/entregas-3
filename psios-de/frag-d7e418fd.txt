@@ -1,0 +1,1009 @@
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>:root{
+  --bg:#F7F6F2;
+  --bg-alt:#EFEDE7;
+  --surface:#FFFFFF;
+  --text:#202525;
+  --muted:#5D6664;
+  --primary:#183D46;
+  --primary-soft:#2B565F;
+  --secondary:#7E988A;
+  --sand:#C2AE95;
+  --border:rgba(32,37,37,.14);
+  --border-soft:rgba(32,37,37,.08);
+  --shadow:0 1px 2px rgba(24,61,70,.04), 0 8px 28px rgba(24,61,70,.06);
+  --shadow-lift:0 2px 6px rgba(24,61,70,.06), 0 18px 44px rgba(24,61,70,.10);
+  --serif:"DM Serif Display", Georgia, "Times New Roman", serif;
+  --sans:"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --wrap:1220px;
+  --radius:12px;
+  --radius-lg:16px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}:where(.ps-root) *,:where(.ps-root) *::before,:where(.ps-root) *::after{box-sizing:border-box}html{-webkit-text-size-adjust:100%}html:focus-within{scroll-behavior:smooth}body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--sans);
+  font-size:17px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}:where(.ps-root) img,:where(.ps-root) video{max-width:100%;height:auto;display:block}:where(.ps-root) a{color:inherit;text-decoration:none}:where(.ps-root) button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}:where(.ps-root) ul{margin:0;padding:0;list-style:none}:where(.ps-root) h1,:where(.ps-root) h2,:where(.ps-root) h3,:where(.ps-root) h4{font-family:var(--serif);font-weight:400;letter-spacing:-.012em;line-height:1.14;margin:0}:where(.ps-root) h1{font-size:clamp(2.5rem,5.4vw,4.1rem)}:where(.ps-root) h2{font-size:clamp(1.95rem,3.5vw,3rem)}:where(.ps-root) h3{font-size:clamp(1.35rem,2vw,1.7rem);line-height:1.22}:where(.ps-root) h4{font-size:1.15rem;line-height:1.3}:where(.ps-root) p{margin:0 0 1.1em}:where(.ps-root) p:last-child{margin-bottom:0}:where(.ps-root) :focus-visible{outline:2px solid var(--primary);outline-offset:3px;border-radius:4px}.ps-wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 28px}.ps-wrap-narrow{max-width:820px;margin:0 auto}.ps-section{padding:clamp(56px,6vw,92px) 0}.ps-section--alt{background:var(--bg-alt)}.ps-section--tight{padding-top:clamp(52px,6vw,80px)}.ps-eyebrow{
+  font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--secondary);margin:0 0 20px;display:block;
+}.ps-eyebrow--light{color:rgba(247,246,242,.62)}.ps-lead{font-size:clamp(1.06rem,1.5vw,1.22rem);color:var(--muted);max-width:62ch}.ps-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  background:var(--primary);color:#F7F6F2;
+  font-size:1rem;font-weight:600;letter-spacing:.01em;
+  padding:17px 34px;border-radius:8px;
+  transition:background .25s var(--ease), transform .25s var(--ease);
+}.ps-btn:hover{background:var(--primary-soft);transform:translateY(-1px)}.ps-btn--lg{padding:21px 44px;font-size:1.06rem}.ps-microcopy{font-size:.85rem;color:var(--muted);margin-top:16px}.js .ps-reveal{opacity:0;transform:translateY(16px);transition:opacity .7s var(--ease), transform .7s var(--ease)}.ps-reveal.ps-is-visible{opacity:1;transform:none}.ps-hero{padding:clamp(48px,6vw,72px) 0 clamp(48px,5vw,72px)}.ps-hero__grid{display:flex;flex-direction:column;align-items:center;text-align:center}.ps-hero h1{margin:0 0 22px}.ps-hero__head{order:1;max-width:940px}.ps-hero__figure{order:3;position:relative;width:100%;margin:clamp(44px,5vw,64px) 0 0}.ps-hero__sub{font-family:var(--sans);font-size:clamp(1.12rem,1.7vw,1.35rem);font-weight:400;line-height:1.5;color:var(--muted);margin:0 auto;max-width:52ch}.ps-hero__figure img{width:100%;border-radius:0;box-shadow:none}.ps-gallery__item{margin:0}.ps-anatomy{display:grid;grid-template-columns:1.35fr .65fr;gap:clamp(28px,3.5vw,52px);align-items:center;margin-top:40px}.ps-anatomy__figure{position:sticky;top:100px;margin:0}.ps-anatomy__figure img{width:100%;border:0;border-radius:0;box-shadow:none;background:none}.ps-steps{counter-reset:none}.ps-steps{display:grid;grid-template-columns:1fr 1fr;gap:0 32px}.ps-steps li{display:grid;grid-template-columns:40px 1fr;gap:12px;padding:16px 0;border-bottom:1px solid var(--border-soft)}.ps-steps li:nth-child(1),.ps-steps li:nth-child(2){padding-top:0}.ps-steps li:nth-child(5),.ps-steps li:nth-child(6){border-bottom:0}.ps-steps__num{font-family:var(--serif);font-size:1.4rem;color:var(--secondary);line-height:1.1}.ps-steps h3{font-size:1.02rem;font-family:var(--sans);font-weight:600;letter-spacing:0;margin-bottom:3px}.ps-steps p{font-size:.92rem;line-height:1.5;color:var(--muted);margin:0}@media (max-width:680px){.ps-steps{grid-template-columns:1fr}.ps-steps li:nth-child(2){padding-top:16px}.ps-steps li:nth-child(5){border-bottom:1px solid var(--border-soft)}}.ps-kinds{display:block;margin-top:44px}.ps-kind{
+  display:grid;grid-template-columns:1.15fr .85fr;
+  gap:clamp(30px,4vw,64px);align-items:center;
+  background:none;border:0;border-radius:0;padding:clamp(34px,4vw,52px) 0;
+  border-bottom:1px solid var(--border-soft);
+}.ps-kind:last-child{border-bottom:0;padding-bottom:0}.ps-kind:first-child{padding-top:0}.ps-kind:nth-child(even) .ps-kind__media{order:2}.ps-kind__media{background:none;border:0;padding:0;min-height:0;display:block}.ps-kind__media img{width:100%;max-height:none;height:auto;box-shadow:none;border-radius:0}.ps-kind__body{padding:0;display:flex;flex-direction:column;gap:12px}.ps-kind__count{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--clay)}.ps-kind h3{font-family:var(--serif);font-size:clamp(1.6rem,2.6vw,2.15rem);font-weight:400;letter-spacing:-.01em}.ps-kind p{font-size:1.02rem;line-height:1.55;margin:0}.ps-kind__list{margin-top:2px}.ps-kind__list li{
+  position:relative;padding:8px 0 8px 28px;font-size:1rem;line-height:1.45;color:var(--text);
+}.ps-kind__list li::before{
+  content:"";position:absolute;left:2px;top:14px;width:11px;height:6px;
+  border-left:2px solid var(--clay);border-bottom:2px solid var(--clay);
+  transform:rotate(-45deg);
+}@media (max-width:820px){.ps-kind{grid-template-columns:1fr;gap:22px;padding:32px 0}.ps-kind:nth-child(even) .ps-kind__media{order:0}}.ps-summary-list{margin-top:46px;border-top:1px solid var(--border)}.ps-acc{border-bottom:1px solid var(--border)}.ps-summary-list h3,.ps-faq h3{font-family:var(--sans);font-weight:400;margin:0}.ps-acc__trigger{
+  width:100%;display:flex;align-items:center;gap:18px;
+  padding:20px 4px;text-align:left;font-family:var(--sans);
+  transition:color .2s var(--ease);
+}.ps-acc__trigger:hover{color:var(--primary)}.ps-acc__index{font-family:var(--sans);font-size:.92rem;font-weight:600;letter-spacing:.06em;color:var(--secondary);min-width:30px}.ps-acc__title{
+  flex:1;font-family:var(--sans) !important;font-size:1.04rem;font-weight:500;
+  letter-spacing:0;text-transform:none;line-height:1.35;color:var(--text);
+}.ps-acc__badge{font-size:.78rem;letter-spacing:.02em;text-transform:none;color:var(--muted);white-space:nowrap}.ps-acc__arrow{width:14px;height:14px;border-right:1.5px solid var(--muted);border-bottom:1.5px solid var(--muted);transform:rotate(45deg) translate(-3px,-3px);transition:transform .3s var(--ease);flex:none}.ps-acc__trigger[aria-expanded="true"] .ps-acc__arrow{transform:rotate(225deg) translate(-3px,-3px)}.ps-acc__panel{overflow:hidden;height:0;transition:height .35s var(--ease)}.ps-acc__inner{padding:2px 4px 30px}.ps-acc__inner p{font-size:.98rem;color:var(--muted)}.ps-maps{display:grid;grid-template-columns:repeat(2,1fr);gap:2px 40px}.ps-maps li{display:flex;gap:14px;padding:9px 0;font-size:.97rem;border-bottom:1px solid var(--border-soft)}.ps-maps li b{font-weight:400;color:var(--secondary);min-width:32px;font-variant-numeric:tabular-nums}.ps-smart{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(38px,5vw,68px);align-items:center;margin-top:48px}.ps-smart__figure{margin:0}.ps-smart__figure img{width:100%;border:1px solid var(--border-soft);border-radius:var(--radius);box-shadow:var(--shadow-lift);background:#fff}.ps-refs{display:flex;flex-wrap:wrap;gap:10px 12px;background:none;border:0;margin-top:26px}.ps-refs li{background:none;padding:0;display:flex;align-items:baseline;gap:8px;
+  border:1px solid var(--border);border-radius:999px;padding:8px 16px;font-size:.9rem}.ps-refs__name{font-family:var(--sans);font-size:.9rem;font-weight:500;line-height:1.3;margin:0;color:var(--text)}.ps-refs__line{font-size:.82rem;color:var(--muted);margin:0}.ps-disclaimer{font-size:.82rem;color:var(--muted);border-left:2px solid var(--border);padding-left:18px;margin-top:26px;max-width:70ch}.ps-stack{margin-top:40px;border-top:0;display:flex;flex-direction:column;gap:18px}.ps-stack__item{
+  display:grid;grid-template-columns:260px 1fr;gap:clamp(24px,3vw,44px);align-items:center;
+  padding:26px 30px;border:1.5px solid var(--clay);border-radius:var(--radius-lg);
+  background:var(--surface);
+}.ps-stack__item img{width:100%;border-radius:12px;box-shadow:none}.ps-stack__item h3{margin-bottom:8px;font-size:1.4rem}.ps-stack__item p{color:var(--muted);max-width:52ch;margin:0}@media (max-width:900px){.ps-stack__item{grid-template-columns:1fr;gap:18px;padding:22px 22px 26px}}.ps-stack__item--bonus{border-color:var(--deep);position:relative}.ps-stack__label--bonus{
+  display:inline-block;background:var(--deep);color:#F4EDE4;
+  font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;
+  padding:5px 12px;border-radius:999px;margin-bottom:10px;
+}.ps-stack__item--noimg{grid-template-columns:1fr}.ps-offer{background:var(--primary);color:#F7F6F2}.ps-offer h2{color:#fff}.ps-offer__list{margin:30px 0 36px}.ps-offer__list li{position:relative;padding-left:28px;padding-block:9px;font-size:1rem;color:rgba(247,246,242,.9);border-bottom:1px solid rgba(247,246,242,.14)}.ps-offer__list li::before{content:"";position:absolute;left:2px;top:19px;width:9px;height:5px;border-left:1.5px solid var(--green-line);border-bottom:1.5px solid var(--green-line);transform:rotate(-45deg)}.ps-price__now{font-family:var(--serif);font-size:clamp(2.6rem,5vw,3.6rem);line-height:1.05;color:#fff;margin:6px 0 4px}.ps-offer .ps-microcopy{color:rgba(247,246,242,.62)}.ps-offer .ps-btn{width:100%;max-width:460px}.ps-guarantee{display:grid;grid-template-columns:220px 1fr;gap:clamp(30px,5vw,64px);align-items:center}.ps-faq{margin-top:44px;border-top:1px solid var(--border);max-width:900px}.ps-faq .ps-acc__trigger{gap:24px}.ps-faq .ps-acc__title{font-family:var(--sans) !important;font-size:1.05rem;font-weight:500;letter-spacing:0}.ps-final{position:relative;overflow:hidden;background:var(--bg-alt)}.ps-final__grid{display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(40px,5vw,72px);align-items:center}.ps-final__figure img{width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-lift)}.ps-final__verbs{font-family:var(--serif);font-size:clamp(1.2rem,1.9vw,1.5rem);line-height:1.7;color:var(--primary);margin:26px 0 36px}@media (max-width:1080px){.ps-refs{grid-template-columns:repeat(2,1fr)}}@media (max-width:900px){body{font-size:16px}.ps-anatomy,.ps-smart,.ps-final__grid,.ps-guarantee{grid-template-columns:1fr}.ps-hero__figure{order:2;margin-top:34px}.ps-anatomy__figure{position:static}.ps-anatomy{gap:26px}.ps-stack__item{grid-template-columns:1fr;gap:22px}.ps-kinds{grid-template-columns:repeat(2,1fr)}.ps-maps{grid-template-columns:1fr}}@media (max-width:680px){.ps-wrap{padding:0 20px}.ps-section{padding:52px 0}:where(.ps-root) h1{font-size:2.35rem}:where(.ps-root) h2{font-size:1.85rem}.ps-kinds{grid-template-columns:1fr}.ps-refs{grid-template-columns:1fr}.ps-btn{width:100%}}@media (prefers-reduced-motion: reduce){html:focus-within{scroll-behavior:auto}:where(.ps-root) *,:where(.ps-root) *::before,:where(.ps-root) *::after{animation-duration:.001ms !important;transition-duration:.001ms !important}.ps-reveal{opacity:1;transform:none}}:root{
+  --bg:#F8F1E8;            
+  --bg-alt:#F1E7DA;        
+  --surface:#FFFFFF;
+  --text:#22312F;
+  --muted:#5F6E6B;
+  --deep:#1B4B4E;          
+  --clay:#8A5A3C;          
+  --accent:#E08B5E;        
+  --accent-soft:#F2C4A6;
+  --primary:#1B4B4E;
+  --primary-soft:#26666A;
+  --secondary:#B98B63;
+  --border:rgba(34,49,47,.14);
+  --border-soft:rgba(34,49,47,.08);
+  --radius:18px;
+  --radius-lg:26px;
+  --shadow:0 2px 4px rgba(27,75,78,.05), 0 12px 32px rgba(27,75,78,.07);
+  --shadow-lift:0 4px 10px rgba(27,75,78,.07), 0 24px 56px rgba(27,75,78,.12);
+}.ps-section--deep{background:var(--deep);color:#F4EDE4}.ps-section--deep h2,.ps-section--deep h3{color:#FFFFFF}.ps-section--deep .ps-lead,.ps-section--deep p{color:rgba(244,237,228,.78)}.ps-section--deep .ps-eyebrow{color:var(--accent-soft)}.ps-section--deep,.ps-final,.ps-offer{
+  border-top-left-radius:50% 46px;
+  border-top-right-radius:50% 46px;
+  margin-top:-46px;
+  position:relative;
+  z-index:1;
+}.ps-hero + .ps-section--deep{z-index:2}.ps-kind,.ps-gallery__item,.ps-smart__figure img,.ps-stack__item img,.ps-hero__figure img{
+  border-radius:var(--radius);
+}.ps-anatomy__figure img{border-radius:0 !important;box-shadow:none !important;border:0 !important}.ps-hero__figure img,.ps-final__figure img{border-radius:var(--radius-lg)}.ps-section--deep .ps-kind{
+  background:rgba(255,255,255,.06);
+  border-color:rgba(255,255,255,.16);
+}.ps-section--deep .ps-kind__media{background:rgba(255,255,255,.05);border-bottom-color:rgba(255,255,255,.14)}.ps-section--deep .ps-kind h3{color:#fff}.ps-section--deep .ps-kind p{color:rgba(244,237,228,.76)}.ps-btn{
+  background:var(--accent);color:#2A1A10;border-radius:999px;
+  padding:18px 38px;font-weight:600;
+  box-shadow:0 6px 18px rgba(224,139,94,.28);
+}.ps-btn:hover{background:#EC9A6D;transform:translateY(-1px)}.ps-btn--lg{padding:22px 48px}.ps-kind__count{letter-spacing:.14em}.ps-hero{padding-bottom:0}.ps-hero__grid{padding-left:0;padding-right:0}.ps-hero__head{padding-left:28px;padding-right:28px}.ps-hero__figure{
+  width:100vw;
+  max-width:none;
+  margin-left:calc(50% - 50vw);
+  margin-right:calc(50% - 50vw);
+  margin-bottom:0;
+}.ps-hero__figure img{
+  width:100vw;
+  max-width:none;
+  height:auto;
+  display:block;
+  border-radius:0 !important;
+  box-shadow:none !important;
+}@media (max-width:680px){.ps-hero__head{padding-left:20px;padding-right:20px}}.ps-offer{background:#1F5C3A}.ps-final{background:var(--clay);color:#FAF3EC}.ps-final h2{color:#fff}.ps-final__verbs{color:var(--accent-soft)}.ps-final .ps-microcopy{color:rgba(250,243,236,.7)}@media (max-width:680px){.ps-section--deep,.ps-final,.ps-offer,.ps-section--deep + .ps-section,.ps-offer + .ps-section,.ps-final + .ps-section{
+    border-top-left-radius:50% 26px;border-top-right-radius:50% 26px;margin-top:-26px;
+  }}.ps-allin{display:grid;grid-template-columns:repeat(2,1fr);gap:2px 44px;margin-top:34px}.ps-allin li{
+  position:relative;padding:9px 0 9px 30px;font-size:1.02rem;color:#F4EDE4;line-height:1.45;
+}.ps-allin li::before{
+  content:"";position:absolute;left:2px;top:15px;width:11px;height:6px;
+  border-left:2px solid var(--accent);border-bottom:2px solid var(--accent);
+  transform:rotate(-45deg);
+}.ps-allin li b{font-weight:600;color:#fff}.ps-compare{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:44px}.ps-compare__col{background:var(--surface);border:1px solid var(--border-soft);border-radius:var(--radius);padding:30px 28px 32px}.ps-compare__col--after{background:var(--deep);border-color:var(--deep);color:#F4EDE4}.ps-compare__col h3{font-size:1.25rem;margin-bottom:20px}.ps-compare__col--after h3{color:#fff}.ps-compare__col li{position:relative;padding-left:26px;padding-block:9px;font-size:.98rem;color:var(--muted);border-bottom:1px solid var(--border-soft)}.ps-compare__col--after li{color:rgba(244,237,228,.86);border-bottom-color:rgba(255,255,255,.14)}.ps-compare__col li:last-child{border-bottom:0}.ps-compare__col li::before{content:"";position:absolute;left:2px;top:18px;width:10px;height:2px;background:var(--clay);opacity:.6}.ps-compare__col--after li::before{
+  content:"";width:9px;height:5px;background:none;top:16px;
+  border-left:1.5px solid var(--accent);border-bottom:1.5px solid var(--accent);
+  transform:rotate(-45deg);opacity:1;
+}@media (max-width:900px){.ps-allin,.ps-compare{grid-template-columns:1fr}}.ps-marquee{position:relative;margin-top:44px;overflow:hidden;
+  margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);
+  width:100vw;max-width:100vw;
+}.ps-marquee .ps-gallery{
+  display:flex !important;width:max-content !important;gap:0 !important;
+  margin:0 !important;padding:4px 0 8px !important;overflow:visible !important;
+  will-change:transform;
+}.ps-marquee .ps-gallery__group{display:flex;gap:26px;padding-right:26px;flex:none}.ps-marquee .ps-gallery__item{
+  flex:0 0 360px !important;cursor:pointer;
+  border:1px solid var(--border-soft);border-radius:var(--radius);
+  overflow:hidden;background:var(--surface);
+}.ps-marquee .ps-gallery__item img{width:100%;aspect-ratio:1/1.414;object-fit:cover;display:block}@media (max-width:900px){.ps-marquee .ps-gallery__item{flex:0 0 300px !important}}@media (max-width:680px){.ps-marquee .ps-gallery__group{gap:18px;padding-right:18px}.ps-marquee .ps-gallery__item{flex:0 0 260px !important}}:root{--green:#4E9E58;--green-soft:#63B26D;--green-line:#7CC486}.ps-btn{background:var(--green);color:#fff;box-shadow:0 6px 18px rgba(78,158,88,.28)}.ps-btn:hover{background:var(--green-soft)}.ps-pricebox{
+  background:#fff;border:3px solid var(--green-line);border-radius:26px;
+  padding:clamp(30px,4vw,46px) clamp(24px,3vw,44px);text-align:center;
+  max-width:640px;margin:0 auto;
+}.ps-pricebox .ps-price__from{
+  font-size:clamp(1.3rem,2.4vw,1.7rem);font-weight:700;color:var(--text);margin:0 0 12px;
+}.ps-pricebox .ps-price__from s{color:var(--text);text-decoration-color:#D8452F;text-decoration-thickness:3px}.ps-pricebox .ps-price__now{
+  font-family:var(--sans);font-weight:800;letter-spacing:-.02em;
+  font-size:clamp(2.5rem,6vw,3.9rem);line-height:1.05;color:var(--green);margin:0 0 10px;
+}.ps-pricebox .ps-price__cash{
+  font-size:clamp(1.05rem,2vw,1.4rem);font-weight:700;color:var(--text);
+  text-transform:uppercase;letter-spacing:.01em;margin:0 0 26px;
+}.ps-pricebox .ps-btn{width:100%;font-size:1.02rem;line-height:1.35;padding:20px 26px;text-transform:uppercase}.ps-pricebox .ps-microcopy{color:var(--muted);margin-top:16px}.ps-offer__list--center{max-width:640px;margin:0 auto 34px}.ps-cta-solo{text-align:center;padding-top:8px}.ps-cta-solo .ps-btn{max-width:520px;width:100%}.ps-guarantee{grid-template-columns:180px 1fr;align-items:center}.ps-guarantee figure img{
+  width:100%;max-width:180px;height:auto;margin:0;
+}@media (max-width:900px){.ps-guarantee{grid-template-columns:1fr;gap:24px;text-align:center;justify-items:center}.ps-guarantee figure img{max-width:120px}.ps-guarantee .ps-lead{margin-left:auto;margin-right:auto}}.ps-topbar{
+  background:#C0392B;color:#fff;text-align:center;
+  padding:11px 20px;font-size:.92rem;font-weight:600;
+  letter-spacing:.01em;line-height:1.35;
+}.ps-topbar b{font-weight:800}@media (max-width:520px){.ps-topbar{font-size:.84rem;padding:10px 16px}}.ps-tdf-acesso{
+    --tdf-teal:#23403D;
+    --tdf-teal-lt:#3A5E5A;
+    --tdf-cream:#F3EDE2;
+    --tdf-coral:#D95D39;
+    --tdf-rule:#D8CFBF;
+    --tdf-muted:#7A7068;
+    font-family:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    max-width:760px;
+    margin:0 auto;
+    background:#fff;
+    border:1px solid var(--tdf-rule);
+    border-top:3px solid var(--tdf-coral);
+    border-radius:10px;
+    padding:28px 26px 24px;
+    box-shadow:0 8px 28px rgba(35,64,61,.07);
+    box-sizing:border-box;
+  }.ps-tdf-acesso *{box-sizing:border-box}.ps-tdf-acesso-head{text-align:center;margin-bottom:22px}.ps-tdf-acesso-badge{
+    display:inline-block;
+    background:var(--tdf-teal);
+    color:#fff;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    padding:7px 18px;
+    border-radius:40px;
+    margin-bottom:12px;
+  }.ps-tdf-acesso-sub{
+    font-family:Georgia,'Times New Roman',serif;
+    font-style:italic;
+    font-size:17px;
+    color:var(--tdf-muted);
+    line-height:1.5;
+    margin:0;
+  }.ps-tdf-acesso-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+  }.ps-tdf-acesso-item{
+    display:flex;
+    gap:13px;
+    align-items:flex-start;
+    background:var(--tdf-cream);
+    border:1px solid var(--tdf-rule);
+    border-radius:8px;
+    padding:16px 16px 17px;
+    transition:transform .2s ease, box-shadow .2s ease;
+  }.ps-tdf-acesso-item:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 22px rgba(35,64,61,.12);
+  }.ps-tdf-acesso-ico{
+    width:36px;height:36px;
+    flex-shrink:0;
+    border-radius:50%;
+    background:var(--tdf-teal);
+    color:#fff;
+    display:flex;align-items:center;justify-content:center;
+    font-size:17px;
+    line-height:1;
+  }.ps-tdf-acesso-item strong{
+    display:block;
+    font-size:14.5px;
+    font-weight:600;
+    color:var(--tdf-teal);
+    margin-bottom:4px;
+    line-height:1.3;
+  }.ps-tdf-acesso-item span{
+    display:block;
+    font-size:12.5px;
+    color:var(--tdf-muted);
+    line-height:1.5;
+  }@media (max-width:720px){.ps-tdf-acesso{padding:24px 18px 20px;border-radius:8px}.ps-tdf-acesso-grid{grid-template-columns:1fr;gap:10px}.ps-tdf-acesso-sub{font-size:15.5px}.ps-tdf-acesso-item{padding:14px}}@media (prefers-reduced-motion:reduce){.ps-tdf-acesso-item{transition:none}.ps-tdf-acesso-item:hover{transform:none}}
+html{scroll-behavior:smooth;background:#fff}
+.ps-root{overflow-x:clip}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+#ps-oferta{scroll-margin-top:24px}
+.js .ps-reveal.ps-is-visible{opacity:1;transform:none}
+.ps-root .ps-hero__cta .ps-btn{max-width:100%}
+@media(max-width:520px){.ps-root img{max-width:100%;height:auto}.ps-root .ps-btn--lg{width:100%;text-align:center}}
+@media(max-width:380px){.ps-root .ps-btn{font-size:.95rem;padding-left:14px;padding-right:14px}}
+.ps-root h1,.ps-root h2,.ps-root h3,.ps-root h4,.ps-root p,.ps-root li,.ps-root span,.ps-root summary,.ps-root a,.ps-root div{overflow-wrap:break-word;-webkit-hyphens:auto;hyphens:auto}.ps-root .ps-btn{-webkit-hyphens:manual;hyphens:manual}</style>
+<script>try{document.documentElement.classList.add('js')}catch(e){}</script>
+<div class="ps-root">
+<div class="ps-topbar">Lebenslanger Zugang + <b>{{savings}} Rabatt</b> – nur für begrenzte Zeit</div>
+<main>
+
+<section class="ps-hero" id="ps-hero">
+<div class="ps-wrap ps-hero__grid">
+<div class="ps-hero__head">
+<span class="ps-eyebrow">Visuelle Bibliothek für die therapeutische Sitzung</span>
+<h1>Therapeutische Mindmaps</h1>
+<p class="ps-hero__sub">Ein visueller Atlas mit über 250 Mindmaps, um Emotionen, Muster, Verhaltensweisen und Beziehungen klar, strukturiert und leicht nachschlagbar zu verstehen.</p>
+<div class="ps-hero__cta" style="margin-top:26px"><a class="ps-btn ps-btn--lg" href="#ps-oferta">JETZT ZUGANG SICHERN ↓</a></div></div>
+<figure class="ps-hero__figure">
+
+<img alt="Visueller Therapie-Atlas" decoding="async" fetchpriority="high" height="900" src="https://recursos-pdf-hub.github.io/entregas-3/psios-de/landing-img/mockup-principal-es.jpg" width="1200"/>
+</figure>
+</div>
+</section>
+
+<div class="ps-tdf-acesso">
+<div class="ps-tdf-acesso-head">
+<span class="ps-tdf-acesso-badge">Lebenslanger Zugang</span>
+<p class="ps-tdf-acesso-sub">Sie kaufen es einmal. Das Material gehört für immer Ihnen.</p>
+</div>
+<div class="ps-tdf-acesso-grid">
+<div class="ps-tdf-acesso-item">
+<div class="ps-tdf-acesso-ico">∞</div>
+<div>
+<strong>Lebenslanger Zugang</strong>
+<span>Keine Monatsgebühr, keine Verlängerung, kein Ablaufdatum.</span>
+</div>
+</div>
+<div class="ps-tdf-acesso-item">
+<div class="ps-tdf-acesso-ico">🖨</div>
+<div>
+<strong>Druckfertiges PDF</strong>
+<span>Hochauflösende Dateien. Drucken Sie sie so oft aus, wie Sie möchten.</span>
+</div>
+</div>
+<div class="ps-tdf-acesso-item">
+<div class="ps-tdf-acesso-ico">↺</div>
+<div>
+<strong>Jederzeit nachschlagen</strong>
+<span>Vom Smartphone, Computer oder gedruckt. Zu jeder Zeit.</span>
+</div>
+</div>
+</div>
+</div>
+
+<section class="ps-section ps-section--deep" id="ps-inclui">
+<div class="ps-wrap">
+<div class="ps-wrap-narrow ps-reveal" style="margin-left:0">
+<h2>Das ist alles enthalten:</h2>
+</div>
+<ul class="ps-allin ps-reveal">
+<li><b>120</b> Emotionale Mindmaps (240 Seiten)</li>
+<li><b>32</b> Visuelle Metaphern</li>
+<li><b>12</b> Vergleichstafeln</li>
+<li><b>12</b> Flussdiagramme für die Sitzung</li>
+<li><b>12</b> Mindmaps der Therapieansätze <b>(Bonus)</b></li>
+<li><b>6</b> Visuelle Skalen <b>(Bonus)</b></li>
+<li>Bearbeitbare Psychologische Dokumente <b>(Bonus)</b></li>
+<li>Regelmäßige Updates ohne Zusatzkosten <b>(Bonus)</b></li>
+<li>Suchindex und Index nach Situationen</li>
+<li>Vollständige Literaturangaben</li>
+<li>Hochauflösendes PDF, digital oder gedruckt</li>
+<li>Sofortiger Zugang &amp; 7 Tage Geld-zurück-Garantie</li>
+</ul>
+</div>
+</section>
+
+<section class="ps-section" id="ps-conteudo">
+<div class="ps-wrap">
+<div class="ps-wrap-narrow ps-reveal" style="margin-left:0">
+<h2>Blick in den Atlas:</h2>
+</div>
+
+<div class="ps-marquee ps-reveal" id="ps-marquee">
+<div class="ps-gallery" id="ps-gallery" role="list">
+<figure class="ps-gallery__item" role="listitem">
+<img alt="Therapeutische Mindmap: Grübeln" decoding="async" height="1137" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-3/psios-de/landing-img/pagina-rumiacion-1.jpg" width="800"/>
+</figure>
+<figure class="ps-gallery__item" role="listitem">
+<img alt="Therapeutische Mindmap: Burnout" decoding="async" height="1253" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-3/psios-de/landing-img/pagina-agotamiento.jpg" width="800"/>
+</figure>
+<figure class="ps-gallery__item" role="listitem">
+<img alt="Therapeutische Mindmap: Selbstsabotage" decoding="async" height="1273" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-3/psios-de/landing-img/pagina-autosabotaje.jpg" width="800"/>
+</figure>
+<figure class="ps-gallery__item" role="listitem">
+<img alt="Therapeutische Mindmap: Hochstapler-Syndrom" decoding="async" height="1258" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-3/psios-de/landing-img/pagina-impostor.jpg" width="800"/>
+</figure>
+</div>
+</div>
+</div>
+</section>
+
+<section class="ps-section ps-section--alt" id="ps-formatos">
+<div class="ps-wrap">
+<div class="ps-wrap-narrow ps-reveal" style="margin-left:0">
+<h2>Das Material im Detail:</h2>
+</div>
+<div class="ps-kinds ps-reveal">
+<article class="ps-kind">
+<div class="ps-kind__media">
+
+<img alt="Visueller Therapie-Atlas" decoding="async" height="424" src="https://recursos-pdf-hub.github.io/entregas-3/psios-de/landing-img/mock-mapas-es.jpg" width="300"/>
+</div>
+<div class="ps-kind__body">
+<span class="ps-kind__count">240 Seiten</span>
+<h3>Emotionale Mindmaps </h3>
+<ul class="ps-kind__list">
+<li>Verstehen Sie jede Emotion in einfachen Worten</li>
+<li>Erkennen Sie, wie es sich im Körper, in den Gedanken und im Verhalten zeigt</li>
+<li>Sehen Sie den Kreislauf, der das Muster aufrechterhält</li>
+</ul>
+</div>
+</article>
+<div class="ps-kinds ps-reveal">
+<article class="ps-kind">
+<div class="ps-kind__media">
+
+<img alt="Visueller Therapie-Atlas" decoding="async" height="424" src="https://recursos-pdf-hub.github.io/entregas-3/psios-de/landing-img/anatomias-es.jpg" width="300"/>
+</div>
+<div class="ps-kind__body">
+<span class="ps-kind__count">32 Elemente</span>
+<h3>Visuelle Metaphern</h3>
+<ul class="ps-kind__list">
+<li>Metaphern, die das Muster auf einen Blick erklären</li>
+<li>Die sechs Bereiche, in denen dieses Muster gewöhnlich auftritt</li>
+</ul>
+</div>
+</article>
+<article class="ps-kind">
+<div class="ps-kind__media">
+
+<img alt="Visueller Therapie-Atlas" decoding="async" height="424" src="https://recursos-pdf-hub.github.io/entregas-3/psios-de/landing-img/mock-tabela-es.jpg" width="300"/>
+</div>
+<div class="ps-kind__body">
+<span class="ps-kind__count">12 Elemente</span>
+<h3>Vergleichstafeln</h3>
+<ul class="ps-kind__list">
+<li>Vergleichen Sie ähnliche Varianten Seite an Seite</li>
+<li>Die vier Bindungsstile, Kommunikationsstile und Stressreaktionen</li>
+<li>Immer nach denselben Kriterien, Zeile für Zeile</li>
+</ul>
+</div>
+</article>
+<article class="ps-kind">
+<div class="ps-kind__media">
+
+<img alt="Visueller Therapie-Atlas" decoding="async" height="300" src="https://recursos-pdf-hub.github.io/entregas-3/psios-de/landing-img/mock-regua-es.jpg" width="424"/>
+</div>
+<div class="ps-kind__body">
+<span class="ps-kind__count">6 Elemente</span>
+<h3>Visuelle Skalen</h3>
+<ul class="ps-kind__list">
+<li>Entdecken Sie, wo Sie gerade stehen</li>
+<li>Toleranzfenster, emotionale Intensität, Selbstbehauptung</li>
+</ul>
+</div>
+</article>
+<article class="ps-kind">
+<div class="ps-kind__media">
+
+<img alt="Visueller Therapie-Atlas" decoding="async" height="424" src="https://recursos-pdf-hub.github.io/entregas-3/psios-de/landing-img/mock-desicao-es.jpg" width="300"/>
+</div>
+<div class="ps-kind__body">
+<span class="ps-kind__count">12 Elemente</span>
+<h3>Flussdiagramme für die Sitzung</h3>
+<ul class="ps-kind__list">
+<li>Beginnen Sie hier, wenn Sie nicht wissen, welche Mindmap Sie suchen</li>
+<li>Sie starten bei dem, was Sie fühlen – nicht beim Fachbegriff des Problems</li>
+</ul>
+</div>
+</article>
+</div>
+</div>
+</div></section>
+
+<section class="ps-section" id="ps-como-funciona">
+<div class="ps-wrap">
+<div class="ps-wrap-narrow ps-reveal" style="margin-left:0">
+<h2>So ist jede Mindmap aufgebaut:</h2>
+</div>
+<div class="ps-anatomy">
+<figure class="ps-anatomy__figure ps-reveal">
+
+<img alt="Visueller Therapie-Atlas" decoding="async" height="1272" src="https://recursos-pdf-hub.github.io/entregas-3/psios-de/landing-img/mapa-detalhado-es.jpg" width="900"/>
+</figure>
+<ol class="ps-steps ps-reveal">
+<li><span class="ps-steps__num">01</span><div><h3>Verstehen</h3><p>Das Kernkonzept, klar verständlich erklärt.</p></div></li>
+<li><span class="ps-steps__num">02</span><div><h3>Erkennen</h3><p>Signale im Körper, in den Gedanken und im Verhalten.</p></div></li>
+<li><span class="ps-steps__num">03</span><div><h3>Den Kreislauf beobachten</h3><p>Was es auslöst, was es verstärkt und was es aufrechterhält.</p></div></li>
+<li><span class="ps-steps__num">04</span><div><h3>Erkunden</h3><p>Fragen zur Vertiefung der Reflexion.</p></div></li>
+<li><span class="ps-steps__num">05</span><div><h3>Vertiefen</h3><p>Bedürfnisse und Glaubenssätze zu diesem Thema.</p></div></li>
+<li><span class="ps-steps__num">06</span><div><h3>Nächste Schritte</h3><p>Pfade zum weiteren Erkunden.</p></div></li>
+</ol>
+</div>
+</div>
+</section>
+
+
+<section class="ps-section" id="ps-sumario" style="background:var(--surface)">
+<div class="ps-wrap">
+<div class="ps-wrap-narrow ps-reveal" style="margin-left:0">
+<h2>Sehen Sie sich alle Themen vorab an</h2>
+</div>
+<div class="ps-summary-list" data-accordion="">
+
+<div class="ps-acc">
+<h3><button aria-controls="ps-sum-01" aria-expanded="false" class="ps-acc__trigger" id="ps-sumb-01">
+<span class="ps-acc__index">01</span>
+<span class="ps-acc__title">Angst, Furcht und Sorgen</span>
+<span class="ps-acc__badge">10 Mindmaps</span>
+<span aria-hidden="true" class="ps-acc__arrow"></span>
+</button></h3>
+<div aria-labelledby="ps-sumb-01" class="ps-acc__panel" id="ps-sum-01" role="region">
+<div class="ps-acc__inner"><ol class="ps-maps">
+<li><b>1</b>Der Angstkreislauf</li><li><b>2</b>Übermäßige Sorgen</li><li><b>3</b>Grübeln</li><li><b>4</b>Unsicherheitsintoleranz</li><li><b>5</b>Hypervigilanz</li><li><b>6</b>Angstbedingte Vermeidung</li><li><b>7</b>Angst, Fehler zu machen</li><li><b>8</b>Angst vor dem Scheitern</li><li><b>9</b>Angst vor der Bewertung durch andere</li><li><b>10</b>Kontrollbedürfnis</li>
+</ol></div>
+</div>
+</div>
+
+<div class="ps-acc">
+<h3><button aria-controls="ps-sum-02" aria-expanded="false" class="ps-acc__trigger" id="ps-sumb-02">
+<span class="ps-acc__index">02</span>
+<span class="ps-acc__title">Emotionen und Emotionsregulation</span>
+<span class="ps-acc__badge">10 Mindmaps</span>
+<span aria-hidden="true" class="ps-acc__arrow"></span>
+</button></h3>
+<div aria-labelledby="ps-sumb-02" class="ps-acc__panel" id="ps-sum-02" role="region">
+<div class="ps-acc__inner"><ol class="ps-maps">
+<li><b>11</b>Wut</li><li><b>12</b>Schuldgefühle</li><li><b>13</b>Scham</li><li><b>14</b>Traurigkeit</li><li><b>15</b>Frustration</li><li><b>16</b>Groll</li><li><b>17</b>Neid</li><li><b>18</b>Einsamkeit</li><li><b>19</b>Emotionale Überforderung</li><li><b>20</b>Schwierigkeiten beim Erkennen und Ausdrücken von Emotionen</li>
+</ol></div>
+</div>
+</div>
+
+<div class="ps-acc">
+<h3><button aria-controls="ps-sum-03" aria-expanded="false" class="ps-acc__trigger" id="ps-sumb-03">
+<span class="ps-acc__index">03</span>
+<span class="ps-acc__title">Selbstwertgefühl und Identität</span>
+<span class="ps-acc__badge">10 Mindmaps</span>
+<span aria-hidden="true" class="ps-acc__arrow"></span>
+</button></h3>
+<div aria-labelledby="ps-sumb-03" class="ps-acc__panel" id="ps-sum-03" role="region">
+<div class="ps-acc__inner"><ol class="ps-maps">
+<li><b>21</b>Innerer Kritiker</li><li><b>22</b>Ständiges Vergleichen</li><li><b>23</b>Hochstapler-Syndrom</li><li><b>24</b>Bedürfnis nach Anerkennung</li><li><b>25</b>Geringes Selbstwertgefühl</li><li><b>26</b>Selbstbild</li><li><b>27</b>Perfektionismus</li><li><b>28</b>Selbstwert</li><li><b>29</b>Authentizität vs. Anpassung</li><li><b>30</b>Selbstmitgefühl</li>
+</ol></div>
+</div>
+</div>
+
+<div class="ps-acc">
+<h3><button aria-controls="ps-sum-04" aria-expanded="false" class="ps-acc__trigger" id="ps-sumb-04">
+<span class="ps-acc__index">04</span>
+<span class="ps-acc__title">Beziehungen und Bindungen</span>
+<span class="ps-acc__badge">10 Mindmaps</span>
+<span aria-hidden="true" class="ps-acc__arrow"></span>
+</button></h3>
+<div aria-labelledby="ps-sumb-04" class="ps-acc__panel" id="ps-sum-04" role="region">
+<div class="ps-acc__inner"><ol class="ps-maps">
+<li><b>31</b>Bindungsstile</li><li><b>32</b>Emotionale Abhängigkeit</li><li><b>33</b>Co-Abhängigkeit</li><li><b>34</b>Angst vor dem Verlassenwerden</li><li><b>35</b>Ablehnungsempfindlichkeit</li><li><b>36</b>Eifersucht und Unsicherheit</li><li><b>37</b>Schwierigkeiten, Vertrauen zu fassen</li><li><b>38</b>Wiederkehrende Beziehungsmuster</li><li><b>39</b>Emotionale Unerreichbarkeit</li><li><b>40</b>Angst vor Intimität</li>
+</ol></div>
+</div>
+</div>
+
+<div class="ps-acc">
+<h3><button aria-controls="ps-sum-05" aria-expanded="false" class="ps-acc__trigger" id="ps-sumb-05">
+<span class="ps-acc__index">05</span>
+<span class="ps-acc__title">Familie und Herkunftsgeschichte</span>
+<span class="ps-acc__badge">10 Mindmaps</span>
+<span aria-hidden="true" class="ps-acc__arrow"></span>
+</button></h3>
+<div aria-labelledby="ps-sumb-05" class="ps-acc__panel" id="ps-sum-05" role="region">
+<div class="ps-acc__inner"><ol class="ps-maps">
+<li><b>41</b>Familienrollen</li><li><b>42</b>Parentifizierung</li><li><b>43</b>Familiäre Triangulierung</li><li><b>44</b>Emotionale Vernachlässigung</li><li><b>45</b>Familiäre Erwartungen</li><li><b>46</b>Schuldgefühle bei der Abgrenzung von der Familie</li><li><b>47</b>Beziehung zur Mutterfigur</li><li><b>48</b>Beziehung zur Vaterfigur</li><li><b>49</b>Geschwisterkonflikte</li><li><b>50</b>Transgenerationale Muster</li>
+</ol></div>
+</div>
+</div>
+
+<div class="ps-acc">
+<h3><button aria-controls="ps-sum-06" aria-expanded="false" class="ps-acc__trigger" id="ps-sumb-06">
+<span class="ps-acc__index">06</span>
+<span class="ps-acc__title">Stress, Trauma und Sicherheit</span>
+<span class="ps-acc__badge">10 Mindmaps</span>
+<span aria-hidden="true" class="ps-acc__arrow"></span>
+</button></h3>
+<div aria-labelledby="ps-sumb-06" class="ps-acc__panel" id="ps-sum-06" role="region">
+<div class="ps-acc__inner"><ol class="ps-maps">
+<li><b>51</b>Kampfreaktion</li><li><b>52</b>Fluchtreaktion</li><li><b>53</b>Erstarrungsreaktion</li><li><b>54</b>Unterwerfungsreaktion</li><li><b>55</b>Emotionale Trigger</li><li><b>56</b>Toleranzfenster</li><li><b>57</b>Hyperaktivierung</li><li><b>58</b>Abkopplung und Hypoaktivierung</li><li><b>59</b>Gefühl von Sicherheit</li><li><b>60</b>Stabilisierung und Erholung nach schwierigen Erfahrungen</li>
+</ol></div>
+</div>
+</div>
+
+<div class="ps-acc">
+<h3><button aria-controls="ps-sum-07" aria-expanded="false" class="ps-acc__trigger" id="ps-sumb-07">
+<span class="ps-acc__index">07</span>
+<span class="ps-acc__title">Selbstsabotage und Verhaltensmuster</span>
+<span class="ps-acc__badge">10 Mindmaps</span>
+<span aria-hidden="true" class="ps-acc__arrow"></span>
+</button></h3>
+<div aria-labelledby="ps-sumb-07" class="ps-acc__panel" id="ps-sum-07" role="region">
+<div class="ps-acc__inner"><ol class="ps-maps">
+<li><b>61</b>Prokrastination</li><li><b>62</b>Selbstsabotage</li><li><b>63</b>Unentschlossenheit</li><li><b>64</b>Vermeidung schwieriger Aufgaben</li><li><b>65</b>Übermäßiges Streben nach Gewissheit</li><li><b>66</b>Impulsivität</li><li><b>67</b>Der Gewohnheitskreislauf</li><li><b>68</b>Bedürfnis, es allen recht zu machen</li><li><b>69</b>Hohe Ansprüche an sich selbst</li><li><b>70</b>Der Kreislauf kurzfristiger Erleichterung</li>
+</ol></div>
+</div>
+</div>
+
+<div class="ps-acc">
+<h3><button aria-controls="ps-sum-08" aria-expanded="false" class="ps-acc__trigger" id="ps-sumb-08">
+<span class="ps-acc__index">08</span>
+<span class="ps-acc__title">Grenzen und Kommunikation</span>
+<span class="ps-acc__badge">10 Mindmaps</span>
+<span aria-hidden="true" class="ps-acc__arrow"></span>
+</button></h3>
+<div aria-labelledby="ps-sumb-08" class="ps-acc__panel" id="ps-sum-08" role="region">
+<div class="ps-acc__inner"><ol class="ps-maps">
+<li><b>71</b>Persönliche Grenzen</li><li><b>72</b>Schwierigkeiten, Nein zu sagen</li><li><b>73</b>Schuldgefühle beim Setzen von Grenzen</li><li><b>74</b>Assertive Kommunikation</li><li><b>75</b>Passive Kommunikation</li><li><b>76</b>Aggressive Kommunikation</li><li><b>77</b>Passiv-aggressive Kommunikation</li><li><b>78</b>Schwierige Gespräche</li><li><b>79</b>Bedürfnisse ausdrücken</li><li><b>80</b>Reparatur nach einem Konflikt</li>
+</ol></div>
+</div>
+</div>
+
+<div class="ps-acc">
+<h3><button aria-controls="ps-sum-09" aria-expanded="false" class="ps-acc__trigger" id="ps-sumb-09">
+<span class="ps-acc__index">09</span>
+<span class="ps-acc__title">Trauer, Verluste und Veränderungen</span>
+<span class="ps-acc__badge">10 Mindmaps</span>
+<span aria-hidden="true" class="ps-acc__arrow"></span>
+</button></h3>
+<div aria-labelledby="ps-sumb-09" class="ps-acc__panel" id="ps-sum-09" role="region">
+<div class="ps-acc__inner"><ol class="ps-maps">
+<li><b>81</b>Trauer verstehen</li><li><b>82</b>Antizipierte Trauer</li><li><b>83</b>Uneindeutige Verluste</li><li><b>84</b>Ende einer Beziehung</li><li><b>85</b>Verlust einer wichtigen Bezugsperson</li><li><b>86</b>Verlust des Arbeitsplatzes</li><li><b>87</b>Orts- oder Umgebungswechsel</li><li><b>88</b>Lebensübergänge</li><li><b>89</b>Trauer-Trigger</li><li><b>90</b>Sinnrekonstruktion nach einem Verlust</li>
+</ol></div>
+</div>
+</div>
+
+<div class="ps-acc">
+<h3><button aria-controls="ps-sum-10" aria-expanded="false" class="ps-acc__trigger" id="ps-sumb-10">
+<span class="ps-acc__index">10</span>
+<span class="ps-acc__title">Körper, Selbstbild und Intimität</span>
+<span class="ps-acc__badge">10 Mindmaps</span>
+<span aria-hidden="true" class="ps-acc__arrow"></span>
+</button></h3>
+<div aria-labelledby="ps-sumb-10" class="ps-acc__panel" id="ps-sum-10" role="region">
+<div class="ps-acc__inner"><ol class="ps-maps">
+<li><b>91</b>Körperbild</li><li><b>92</b>Körperscham</li><li><b>93</b>Körperlicher Vergleich</li><li><b>94</b>Beziehung zum eigenen Körper</li><li><b>95</b>Stress und Körperempfindungen</li><li><b>96</b>Körpersignale erkennen</li><li><b>97</b>Spannung und Alarmbereitschaft</li><li><b>98</b>Intimität und Verletzlichkeit</li><li><b>99</b>Scham in der Intimität</li><li><b>100</b>Verbindung Körper–Emotion</li>
+</ol></div>
+</div>
+</div>
+
+<div class="ps-acc">
+<h3><button aria-controls="ps-sum-11" aria-expanded="false" class="ps-acc__trigger" id="ps-sumb-11">
+<span class="ps-acc__index">11</span>
+<span class="ps-acc__title">Arbeit, Geld und Sinn</span>
+<span class="ps-acc__badge">10 Mindmaps</span>
+<span aria-hidden="true" class="ps-acc__arrow"></span>
+</button></h3>
+<div aria-labelledby="ps-sumb-11" class="ps-acc__panel" id="ps-sum-11" role="region">
+<div class="ps-acc__inner"><ol class="ps-maps">
+<li><b>101</b>Burnout</li><li><b>102</b>Schuldgefühle beim Ausruhen</li><li><b>103</b>Überarbeitung</li><li><b>104</b>Grenzen am Arbeitsplatz</li><li><b>105</b>Berufliches Hochstapler-Syndrom</li><li><b>106</b>Angst, Geld zu verlangen</li><li><b>107</b>Glaubenssätze über Geld</li><li><b>108</b>Finanzielle Ängste</li><li><b>109</b>Berufliche Neuorientierung</li><li><b>110</b>Beruflicher Sinn und Werte</li>
+</ol></div>
+</div>
+</div>
+
+<div class="ps-acc">
+<h3><button aria-controls="ps-sum-12" aria-expanded="false" class="ps-acc__trigger" id="ps-sumb-12">
+<span class="ps-acc__index">12</span>
+<span class="ps-acc__title">Selbsterkenntnis und innere Ressourcen</span>
+<span class="ps-acc__badge">10 Mindmaps</span>
+<span aria-hidden="true" class="ps-acc__arrow"></span>
+</button></h3>
+<div aria-labelledby="ps-sumb-12" class="ps-acc__panel" id="ps-sum-12" role="region">
+<div class="ps-acc__inner"><ol class="ps-maps">
+<li><b>111</b>Emotionale Bedürfnisse</li><li><b>112</b>Persönliche Werte</li><li><b>113</b>Gedanke → Emotion → Verhalten</li><li><b>114</b>Trigger identifizieren</li><li><b>115</b>Unterstützungsnetzwerk</li><li><b>116</b>Bewältigungsstrategien</li><li><b>117</b>Innere Ressourcen</li><li><b>118</b>Therapeutische Ziele</li><li><b>119</b>Fortschritte erkennen</li><li><b>120</b>Persönlicher Kontinuitätsplan</li>
+</ol></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="ps-section ps-section--deep">
+<div class="ps-wrap">
+<div class="ps-wrap-narrow ps-reveal" style="margin-left:0">
+<h2>Nutzen Sie das Inhaltsverzeichnis, um einfach und übersichtlich durch das Material zu navigieren.</h2>
+</div>
+<div class="ps-smart">
+<figure class="ps-smart__figure ps-reveal">
+
+<img alt="Visueller Therapie-Atlas" decoding="async" height="1272" src="https://recursos-pdf-hub.github.io/entregas-3/psios-de/landing-img/indice-es.jpg" width="900"/>
+</figure>
+</div>
+</div>
+</section>
+
+<section class="ps-section">
+<div class="ps-wrap">
+<div class="ps-wrap-narrow ps-reveal" style="margin-left:0">
+<span class="ps-eyebrow">Der Unterschied in der Praxis</span>
+<h2>Dasselbe Thema – mit und ohne den Atlas</h2>
+</div>
+<div class="ps-compare">
+<div class="ps-compare__col ps-reveal">
+<h3>Wie es gewöhnlich aussieht</h3>
+<ul>
+<li>Das Konzept ist auf drei verschiedene Bücher verteilt.</li>
+<li>Sie erklären dasselbe Thema jedes Mal wieder von Grund auf.</li>
+<li>Sie zeichnen es spontan auf ein Blatt, und die Zeichnung geht verloren.</li>
+<li>Ihre Klient:innen verlassen die Sitzung und vergessen die Hälfte.</li>
+<li>Es bleibt kein visuelles Material, das Sie mitgeben können.</li>
+<li>Das Erstellen eigener Materialien kostet Sie jede Woche wertvolle Stunden.</li>
+</ul>
+</div>
+<div class="ps-compare__col ps-compare__col--after ps-reveal">
+<h3>Mit dem Atlas</h3>
+<ul>
+<li>Sie finden das Thema dank des Inhaltsverzeichnisses in Sekundenschnelle.</li>
+<li>Die Struktur ist bei allen Mindmaps dieselbe.</li>
+<li>Die Seite existiert bereits – bereit zum Zeigen oder Drucken.</li>
+<li>Ihre Klient:innen nehmen die Mindmap mit und schauen später nach.</li>
+<li>Die Reflexionsfragen sind bereits im Material enthalten.</li>
+<li>Nichts vorzubereiten: Einfach öffnen und nutzen.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section class="ps-section ps-section--tight ps-section--alt" id="ps-referencias" style="padding-bottom:clamp(40px,4vw,56px)">
+<div class="ps-wrap">
+<div class="ps-wrap-narrow ps-reveal" style="margin-left:0">
+<span class="ps-eyebrow" style="margin-bottom:12px">Forschung und Referenzen</span>
+<p class="ps-lead" style="max-width:70ch">Der redaktionelle Prozess greift auf Konzepte verschiedener psychologischer Strömungen zurück.</p>
+</div>
+<ul class="ps-refs ps-reveal">
+<li><p class="ps-refs__name">Aaron und Judith Beck</p><p class="ps-refs__line">KVT</p></li>
+<li><p class="ps-refs__name">Jeffrey E. Young</p><p class="ps-refs__line">Schematherapie</p></li>
+<li><p class="ps-refs__name">Marsha M. Linehan</p><p class="ps-refs__line">DBT</p></li>
+<li><p class="ps-refs__name">Steven C. Hayes</p><p class="ps-refs__line">ACT</p></li>
+<li><p class="ps-refs__name">John Bowlby</p><p class="ps-refs__line">Bindungstheorie</p></li>
+<li><p class="ps-refs__name">Paul Gilbert</p><p class="ps-refs__line">Mitgefühl</p></li>
+<li><p class="ps-refs__name">James Gross</p><p class="ps-refs__line">Emotionsregulation</p></li>
+<li><p class="ps-refs__name">Leslie Greenberg</p><p class="ps-refs__line">Emotionsfokussiert</p></li>
+</ul>
+<p class="ps-disclaimer ps-reveal" style="margin-top:20px;font-size:.78rem">Die Nennung von Autor:innen und Werken dient als Literaturangabe oder konzeptionelle Inspiration und impliziert keine Mitwirkung, Überprüfung, Zusammenarbeit oder Unterstützung des Visuellen Therapie-Atlas durch die Autor:innen.</p>
+</div>
+</section>
+
+<section class="ps-section">
+<div class="ps-wrap">
+<div class="ps-wrap-narrow ps-reveal" style="margin-left:0">
+<span class="ps-eyebrow">Ihr Zugang</span>
+<h2>Alles, was Sie erhalten</h2>
+</div>
+<div class="ps-stack">
+<article class="ps-stack__item ps-reveal">
+
+<img alt="Visueller Therapie-Atlas" decoding="async" height="450" src="https://recursos-pdf-hub.github.io/entregas-3/psios-de/landing-img/mockup-mapas-es.jpg" width="600"/>
+<div>
+<h3>120 Emotionale Mindmaps</h3>
+<p>240 Seiten in 12 Themenbereichen.</p>
+</div>
+</article>
+<article class="ps-stack__item ps-reveal">
+
+<img alt="Visueller Therapie-Atlas" decoding="async" height="450" src="https://recursos-pdf-hub.github.io/entregas-3/psios-de/landing-img/anatomias-mock-es.jpg" width="600"/>
+<div>
+<h3>32 Visuelle Metaphern</h3>
+<p>Wie das Muster im Inneren funktioniert – auf einen Blick.</p>
+</div>
+</article>
+<article class="ps-stack__item ps-reveal">
+
+<img alt="Visueller Therapie-Atlas" decoding="async" height="450" src="https://recursos-pdf-hub.github.io/entregas-3/psios-de/landing-img/mockup-regua-es.jpg" width="600"/>
+<div>
+<h3>12 Vergleichstafeln</h3>
+<p>Varianten desselben Themas, Seite an Seite verglichen.</p>
+</div>
+</article>
+<article class="ps-stack__item ps-reveal">
+
+<img alt="Visueller Therapie-Atlas" decoding="async" height="450" src="https://recursos-pdf-hub.github.io/entregas-3/psios-de/landing-img/fluxogramas-es.jpg" width="600"/>
+<div>
+<h3>12 Flussdiagramme für die Sitzung</h3>
+<p>Eines pro Themenbereich. Von der Situation zur passenden Mindmap.</p>
+</div>
+</article>
+<article class="ps-stack__item ps-reveal">
+
+<img alt="Visueller Therapie-Atlas" decoding="async" height="450" src="https://recursos-pdf-hub.github.io/entregas-3/psios-de/landing-img/indice-es.jpg" width="600"/>
+<div>
+<h3>Suchindex und Literaturangaben</h3>
+<p>Finden Sie jedes Thema und schlagen Sie die Quellen nach.</p>
+</div>
+</article>
+</div>
+</div>
+</section>
+
+<section class="ps-section ps-section--alt">
+<div class="ps-wrap">
+<div class="ps-wrap-narrow ps-reveal" style="margin-left:0">
+<span class="ps-eyebrow">Zusätzlich zum Hauptmaterial</span>
+<h2>Im Zugang enthaltene Boni</h2>
+</div>
+<div class="ps-stack">
+<article class="ps-stack__item ps-stack__item--bonus ps-reveal">
+
+<img alt="Visueller Therapie-Atlas" decoding="async" height="450" src="https://recursos-pdf-hub.github.io/entregas-3/psios-de/landing-img/mapas-abordagens-es.jpg" width="600"/>
+<div>
+<span class="ps-stack__label--bonus">Bonus 01</span>
+<h3>12 Mindmaps der Wichtigsten Therapieansätze</h3>
+<p>KVT, Psychoanalyse, Gestalttherapie, ACT, DBT, Schematherapie, Systemische Therapie, Humanistische Therapie, Jungsche Therapie, EMDR, Somatic Experiencing und Transaktionsanalyse, verglichen nach denselben Kriterien.</p>
+</div>
+</article>
+<article class="ps-stack__item ps-stack__item--bonus ps-reveal">
+
+<img alt="Visueller Therapie-Atlas" decoding="async" height="450" src="https://recursos-pdf-hub.github.io/entregas-3/psios-de/landing-img/documentos-es.jpg" width="600"/>
+<div>
+<span class="ps-stack__label--bonus">Bonus 02</span>
+<h3>Bearbeitbare Psychologische Dokumente</h3>
+<p>Vorlagen mit Schritt-für-Schritt-Anleitungen: Bescheinigung, psychologischer Bericht, Verlaufsbericht, Gutachten und Überweisungsbogen. 100 % bearbeitbar.</p>
+</div>
+</article>
+<article class="ps-stack__item ps-stack__item--bonus ps-stack__item--noimg ps-reveal">
+<div>
+<span class="ps-stack__label--bonus">Bonus 03</span>
+<h3>Regelmäßige Updates</h3>
+<p>Neue Materialien und Überarbeitungen der Sammlung werden regelmäßig veröffentlicht – ohne zusätzliche Kosten für alle, die bereits Zugang haben.</p>
+</div>
+</article>
+</div>
+</div>
+</section>
+
+
+<section class="ps-section ps-offer" id="ps-oferta">
+<div class="ps-wrap">
+<div class="ps-wrap-narrow ps-reveal" style="text-align:center">
+<span class="ps-eyebrow ps-eyebrow--light">Vollständiger Zugang</span>
+<h2>Sichern Sie sich den vollständigen Visuellen Therapie-Atlas</h2>
+</div>
+<figure class="ps-reveal" style="margin:0 auto 28px;max-width:640px"><img alt="Visueller Therapie-Atlas" decoding="async" height="900" src="https://recursos-pdf-hub.github.io/entregas-3/psios-de/landing-img/mockup-geral-es.jpg" width="1200"/></figure>
+<ul class="ps-offer__list ps-offer__list--center ps-reveal">
+<li>120 Emotionale Mindmaps (240 S.)</li>
+<li>32 Visuelle Metaphern</li>
+<li>12 Vergleichstafeln</li>
+<li>12 Flussdiagramme für die Sitzung</li>
+<li>Suchindex und Literaturverzeichnis</li>
+<li><b>Bonus:</b> 12 Mindmaps der Wichtigsten Therapieansätze</li>
+<li><b>Bonus:</b> 6 Visuelle Skalen</li>
+<li><b>Bonus:</b> Bearbeitbare Psychologische Dokumente</li>
+<li><b>Bonus:</b> Regelmäßige Updates ohne Zusatzkosten</li>
+</ul>
+<div class="ps-pricebox ps-reveal">
+<p class="ps-price__from">Regulär <s>{{original_price}}</s>, heute nur</p>
+<p class="ps-price__now">{{price}}</p>
+<p class="ps-price__cash">Einmalzahlung · keine Monatsgebühr</p>
+<div style="display:flex;justify-content:center;width:100%;margin:0 0 14px;">
+<span style="
+    display:inline-block;text-align:center;
+    max-width:100%;box-sizing:border-box;
+    background:#EDF5EE;color:#3B6B40;
+    border:1.5px solid #A8CDA9;border-radius:40px;
+    font-family:'DM Sans',-apple-system,'Segoe UI',sans-serif;
+    font-size:12px;font-weight:700;
+    letter-spacing:.05em;text-transform:uppercase;
+    padding:9px 16px;line-height:1.35;">
+    Einmalzahlung und lebenslanger Zugang
+  </span>
+</div>
+<a class="ps-btn" href="/checkout">JETZT ZUGANG SICHERN</a>
+<p class="ps-microcopy">Sichere Zahlung • Sofortiger digitaler Zugang • 7 Tage Geld-zurück-Garantie</p>
+</div>
+</div>
+</section>
+
+<section class="ps-section">
+<div class="ps-wrap ps-guarantee ps-reveal">
+<figure class="ps-reveal" style="margin:0"><img alt="Visueller Therapie-Atlas" decoding="async" height="400" src="https://recursos-pdf-hub.github.io/entregas-3/psios-de/landing-img/selo-garantia.jpg" width="400"/></figure>
+<div>
+<h2>7 Tage bedingungslose Geld-zurück-Garantie</h2>
+<p class="ps-lead" style="margin-top:22px">Sichern Sie sich den vollständigen Zugang. Sollte das Material nicht zu Ihnen passen, fordern Sie innerhalb von 7 Tagen Ihr Geld zurück.</p>
+</div>
+</div>
+<div class="ps-wrap ps-cta-solo ps-reveal" style="margin-top:34px">
+<a class="ps-btn ps-btn--lg" href="#ps-oferta">JETZT ZUGANG SICHERN ↓</a>
+</div>
+</section>
+
+<section class="ps-section ps-section--alt" id="ps-faq">
+<div class="ps-wrap">
+<div class="ps-reveal">
+<h2>Häufig gestellte Fragen:</h2>
+</div>
+<div class="ps-faq" data-accordion="">
+<div class="ps-acc"><h3><button aria-controls="ps-faq-1" aria-expanded="false" class="ps-acc__trigger" id="ps-faqb-1"><span class="ps-acc__title">Ist der Atlas ein gedrucktes Buch?</span><span aria-hidden="true" class="ps-acc__arrow"></span></button></h3>
+<div aria-labelledby="ps-faqb-1" class="ps-acc__panel" id="ps-faq-1" role="region"><div class="ps-acc__inner"><p>Nein. Das Material wird im digitalen Format (PDF) bereitgestellt. Sie können es auf dem Smartphone, Computer oder Tablet nutzen und die gewünschten Mindmaps ausdrucken.</p></div></div></div>
+<div class="ps-acc"><h3><button aria-controls="ps-faq-2" aria-expanded="false" class="ps-acc__trigger" id="ps-faqb-2"><span class="ps-acc__title">Muss ich Therapeut:in sein, um das Material zu nutzen?</span><span aria-hidden="true" class="ps-acc__arrow"></span></button></h3>
+<div aria-labelledby="ps-faqb-2" class="ps-acc__panel" id="ps-faq-2" role="region"><div class="ps-acc__inner"><p>Nein. Die Inhalte nutzen eine verständliche Sprache und wurden so entwickelt, dass sie auch für jede an Selbsterkenntnis interessierte Person leicht zugänglich sind.</p></div></div></div>
+<div class="ps-acc"><h3><button aria-controls="ps-faq-5" aria-expanded="false" class="ps-acc__trigger" id="ps-faqb-5"><span class="ps-acc__title">Erhalte ich alle Mindmaps?</span><span aria-hidden="true" class="ps-acc__arrow"></span></button></h3>
+<div aria-labelledby="ps-faqb-5" class="ps-acc__panel" id="ps-faq-5" role="region"><div class="ps-acc__inner"><p>Ja. Der Zugang umfasst die 120 Mindmaps, aufgeteilt in 12 Themenbereiche, sowie die 32 visuellen Metaphern, die 12 Vergleichstafeln und die 12 Flussdiagramme für die Sitzung plus die Boni.</p></div></div></div>
+<div class="ps-acc"><h3><button aria-controls="ps-faq-13" aria-expanded="false" class="ps-acc__trigger" id="ps-faqb-13"><span class="ps-acc__title">Was sind die Metaphern, Vergleichstafeln, Flussdiagramme und Skalen?</span><span aria-hidden="true" class="ps-acc__arrow"></span></button></h3>
+<div aria-labelledby="ps-faqb-13" class="ps-acc__panel" id="ps-faq-13" role="region"><div class="ps-acc__inner"><p>Diese Formate ergänzen die Mindmaps. Metaphern zeigen auf einer Seite, wie eine Gruppe von Mustern funktioniert; Vergleichstafeln stellen Varianten desselben Themas Seite an Seite gegenüber; Flussdiagramme gehen von einer Situation aus und zeigen, welche Mindmaps zu konsultieren sind; Skalen stellen beschreibende Stufen dar, ohne Punktzahl oder Klassifizierung.</p></div></div></div>
+<div class="ps-acc"><h3><button aria-controls="ps-faq-7" aria-expanded="false" class="ps-acc__trigger" id="ps-faqb-7"><span class="ps-acc__title">Stellen die Mindmaps Diagnosen?</span><span aria-hidden="true" class="ps-acc__arrow"></span></button></h3>
+<div aria-labelledby="ps-faqb-7" class="ps-acc__panel" id="ps-faq-7" role="region"><div class="ps-acc__inner"><p>Nein. Das Material dient psychoedukativen Zwecken und ersetzt weder eine Diagnostik noch die fachliche Beurteilung durch eine professionelle Fachkraft.</p></div></div></div>
+<div class="ps-acc"><h3><button aria-controls="ps-faq-12" aria-expanded="false" class="ps-acc__trigger" id="ps-faqb-12"><span class="ps-acc__title">Gibt es eine Garantie?</span><span aria-hidden="true" class="ps-acc__arrow"></span></button></h3>
+<div aria-labelledby="ps-faqb-12" class="ps-acc__panel" id="ps-faq-12" role="region"><div class="ps-acc__inner"><p>Ja. Das Produkt enthält 7 Tage Geld-zurück-Garantie.</p></div></div></div>
+</div>
+</div>
+</section>
+
+<section class="ps-section ps-final">
+<div class="ps-wrap ps-final__grid">
+<div class="ps-reveal">
+<span class="ps-eyebrow">240 Seiten • 12 Themenbereiche • eine einzige Bibliothek</span>
+<h2>Haben Sie die wichtigsten therapeutischen Themen visuell an einem Ort strukturiert.</h2>
+<p class="ps-final__verbs">Nachschlagen. Erkunden. Vertiefen.<br/>Kommen Sie darauf zurück, wann immer ein neues Thema auftaucht.</p>
+<a class="ps-btn ps-btn--lg" href="#ps-oferta">JETZT ZUGANG SICHERN ↓</a>
+<p class="ps-microcopy">Sofortiger Zugang • Digitale Dateien • 7 Tage Geld-zurück-Garantie</p>
+</div>
+<figure class="ps-final__figure ps-reveal" style="margin:0">
+
+<img alt="Visueller Therapie-Atlas" decoding="async" height="800" src="https://recursos-pdf-hub.github.io/entregas-3/psios-de/landing-img/mockup-geral-final.jpg" width="1000"/>
+</figure>
+</div>
+</section>
+<footer style="text-align:center;padding:40px 20px 56px;font-size:13px;color:var(--muted,#6b6b6b);line-height:1.6">
+<p style="font-weight:600;margin:0 0 6px">Visueller Therapie-Atlas</p>
+<p style="max-width:640px;margin:0 auto 12px">Dies ist ein psychoedukatives Material. Sein Inhalt darf nicht als Ersatz für Diagnostik, Behandlung, Beurteilung oder Begleitung durch eine qualifizierte Fachperson verwendet werden.</p>
+<p style="margin:0">Visueller Therapie-Atlas © 2026 — Alle Rechte vorbehalten.</p>
+</footer>
+</main></div><script>try{
+(function () {
+  "use strict";
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+
+  
+  document.addEventListener("click", function (e) {
+    var link = e.target.closest('a[href^="#"]');
+    if (!link) return;
+    var id = link.getAttribute("href");
+    if (id.length < 2) return;
+    var target = document.querySelector(id);
+    if (!target) return;
+    e.preventDefault();
+    var top = target.getBoundingClientRect().top + window.pageYOffset - 76;
+    window.scrollTo({ top: top, behavior: reduceMotion ? "auto" : "smooth" });
+    target.setAttribute("tabindex", "-1");
+    target.focus({ preventScroll: true });
+  });
+
+  
+  document.querySelectorAll("[data-accordion]").forEach(function (group) {
+    group.querySelectorAll(".ps-acc__trigger").forEach(function (trigger) {
+      var panel = document.getElementById(trigger.getAttribute("aria-controls"));
+      trigger.addEventListener("click", function () {
+        var isOpen = trigger.getAttribute("aria-expanded") === "true";
+        if (isOpen) {
+          panel.style.height = panel.scrollHeight + "px";
+          requestAnimationFrame(function () { panel.style.height = "0px"; });
+          trigger.setAttribute("aria-expanded", "false");
+        } else {
+          trigger.setAttribute("aria-expanded", "true");
+          panel.style.height = panel.scrollHeight + "px";
+          window.setTimeout(function () {
+            if (trigger.getAttribute("aria-expanded") === "true") panel.style.height = "auto";
+          }, 360);
+        }
+      });
+    });
+  });
+
+  
+  var marquee = document.getElementById("ps-marquee");
+  var track = document.getElementById("ps-gallery");
+  if (marquee && track && track.firstElementChild) {
+    // 1. agrupa os itens originais
+    var group = document.createElement("div");
+    group.className = "ps-gallery__group";
+    while (track.firstElementChild) group.appendChild(track.firstElementChild);
+    track.appendChild(group);
+
+    // 2. imagens deixam de ser lazy: a largura não pode mudar depois
+    track.querySelectorAll("img").forEach(function (img) {
+      img.loading = "eager";
+      img.removeAttribute("loading");
+    });
+
+    var groupWidth = 0;
+    var x = 0;
+    var speed = 42;   // pixels por segundo
+    var last = null;
+    var paused = false;
+
+    // 3. clona grupos até o trilho cobrir pelo menos 3x a largura da tela.
+    //    com folga assim, nunca existe borda visível durante o reposicionamento.
+    function build() {
+      groupWidth = group.getBoundingClientRect().width;
+      if (!groupWidth) return;
+      var alvo = window.innerWidth * 3 + groupWidth;
+      var atual = track.getBoundingClientRect().width;
+      var guarda = 0;
+      while (atual < alvo && guarda < 12) {
+        var c = group.cloneNode(true);
+        c.setAttribute("aria-hidden", "true");
+        track.appendChild(c);
+        atual += groupWidth;
+        guarda++;
+      }
+    }
+
+    function measure() {
+      var novo = group.getBoundingClientRect().width;
+      if (novo && Math.abs(novo - groupWidth) > 1) {
+        groupWidth = novo;
+        x = 0;
+      }
+    }
+
+    build();
+    window.addEventListener("resize", function () { measure(); build(); });
+    window.addEventListener("orientationchange", function () { measure(); build(); });
+    window.addEventListener("load", function () { measure(); build(); });
+    track.querySelectorAll("img").forEach(function (img) {
+      if (!img.complete) img.addEventListener("load", function () { measure(); build(); });
+    });
+
+    // 4. loop em pixels
+    function frame(now) {
+      if (last === null) last = now;
+      var dt = (now - last) / 1000;
+      last = now;
+      if (dt > 0.25) dt = 0;
+      if (!paused && groupWidth > 0) {
+        x -= speed * dt;
+        while (x <= -groupWidth) x += groupWidth;
+        track.style.transform = "translate3d(" + x + "px,0,0)";
+      }
+      requestAnimationFrame(frame);
+    }
+    if (!reduceMotion) requestAnimationFrame(frame);
+
+    marquee.addEventListener("click", function () { paused = !paused; });
+    marquee.addEventListener("touchstart", function () { paused = true; }, { passive: true });
+    marquee.addEventListener("touchend", function () { paused = false; }, { passive: true });
+    marquee.addEventListener("mouseenter", function () { paused = true; });
+    marquee.addEventListener("mouseleave", function () { paused = false; });
+    document.addEventListener("visibilitychange", function () { last = null; });
+  }
+
+  
+  var revealables = document.querySelectorAll(".ps-reveal");
+  if (reduceMotion || !("IntersectionObserver" in window)) {
+    revealables.forEach(function (el) { el.classList.add("ps-is-visible"); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("ps-is-visible");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    revealables.forEach(function (el) { io.observe(el); });
+  }
+})();
+
+(function(){function chk(){var vh=window.innerHeight||800;document.querySelectorAll('.ps-reveal:not(.ps-is-visible)').forEach(function(el){var r=el.getBoundingClientRect();if(r.top<vh*1.15&&r.bottom>-vh*0.5){el.classList.add('ps-is-visible');}});}window.addEventListener('scroll',chk,{passive:true});window.addEventListener('resize',chk);window.addEventListener('load',function(){chk();setTimeout(chk,600);setTimeout(chk,2000);});document.addEventListener('DOMContentLoaded',chk);})();
+
+setTimeout(function(){document.querySelectorAll('.ps-reveal').forEach(function(e){e.classList.add('ps-is-visible')})},2500);
+}catch(e){document.querySelectorAll(".ps-reveal").forEach(function(x){x.classList.add("ps-is-visible")})}</script>
