@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Kompendium Ortodonty</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F1F7FC;--paper:#FFFFFF;--ink:#122A45;--ink-soft:#4E627A;--accent:#1683CE;--accent-dark:#0F3157;--line:#CBE6F8}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--ink)}
+body{font-family:'Inter',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;line-height:1.2}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+.hero{background:linear-gradient(160deg,var(--accent-dark),var(--accent));color:var(--paper);padding:48px 0 64px;text-align:center}
+.hero .kicker{display:inline-block;border:1px solid rgba(255,255,255,.5);border-radius:99px;padding:5px 14px;font-size:13px;font-weight:700;margin-bottom:14px}
+.hero h1{font-size:clamp(30px,6vw,48px);margin-bottom:10px}
+.hero p{font-size:18px;opacity:.93;max-width:660px;margin:0 auto}
+.stats{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:22px}
+.stats span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);border-radius:99px;padding:8px 16px;font-weight:700;font-size:15px}
+.core{position:relative;margin:-36px auto 36px;background:var(--paper);border:2px solid var(--accent);border-radius:20px;padding:26px;display:grid;grid-template-columns:180px 1fr;gap:24px;align-items:center;box-shadow:0 18px 40px rgba(0,0,0,.10)}
+.core .ph{aspect-ratio:2/3;border-radius:10px;background:linear-gradient(160deg,var(--accent),var(--accent-dark));display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Fraunces',serif;font-weight:800;font-size:44px}
+.tag{display:inline-block;background:var(--accent);color:var(--paper);border-radius:99px;padding:4px 12px;font-size:13px;font-weight:700;margin-bottom:10px}
+.core h2{font-size:clamp(22px,4vw,30px);margin-bottom:8px}
+.core p{color:var(--ink-soft);margin-bottom:16px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:12px 26px;border-radius:12px;background:var(--accent);color:var(--paper);font-weight:700;font-size:17px;text-decoration:none;box-shadow:0 4px 0 var(--accent-dark)}
+.btn:hover{filter:brightness(1.05)}
+.meta{font-size:13px;color:var(--ink-soft)}
+.sec{margin:0 0 40px}
+.sec h2{font-size:clamp(22px,4vw,28px);margin-bottom:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:8px;text-decoration:none;transition:transform .12s,border-color .12s}
+.card:hover{transform:translateY(-2px);border-color:var(--accent)}
+.card .n{font-size:13px;font-weight:700;color:var(--accent)}
+.card h3{font-size:18px}
+.card p{color:var(--ink-soft);font-size:15px;flex:1}
+.card .go{font-weight:700;color:var(--accent-dark)}
+.pasos{counter-reset:p;list-style:none;display:grid;gap:10px}
+.pasos li{counter-increment:p;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px 16px 14px 58px;position:relative}
+.pasos li::before{content:counter(p);position:absolute;left:14px;top:12px;width:32px;height:32px;border-radius:50%;background:var(--accent);color:var(--paper);font-weight:800;display:flex;align-items:center;justify-content:center}
+.next{background:var(--paper);border:2px solid var(--accent);border-radius:18px;padding:22px;text-align:center}
+.next p{color:var(--ink-soft);margin:8px auto 16px;max-width:620px}
+.foot{text-align:center;color:var(--ink-soft);font-size:13px;padding:10px 0 40px}
+@media (max-width:640px){.core{grid-template-columns:1fr;text-align:center;padding:20px}.core .ph{max-width:150px;margin:0 auto;width:100%}.btn{width:100%}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <span class="kicker">Witamy · Kompendium Ortodonty</span>
+    <h1>Kompendium Ortodonty</h1>
+    <p>Kliniczny system referencyjny uporządkowany według typu przypadku: 9 modułów, 120+ map wizualnych, 4 przewodniki i 5 narzędzi gabinetowych. W telefonie, na tablecie lub wydrukowany.</p>
+    <div class="stats"><span>9 Modułów</span><span>120+ Map Wizualnych</span><span>5 Narzędzi Gabinetowych</span></div>
+  </div>
+</header>
+<main class="wrap">
+  <section class="core"><div class="ph" aria-hidden="true">120+</div><div><span class="tag">Materiał główny</span><h2>120+ Map Wizualnych</h2><p>Każdy temat kliniczny na jednej stronie: istota, na co patrzeć i jak zdecydować.</p><p class="meta">PDF · 123 strony · 4.5 MB</p><a class="btn" href="pdf/mapy-wizualne.pdf" target="_blank" rel="noopener">Otwórz →</a></div></section>
+  <section class="sec"><h2>Książka, przewodniki i narzędzia</h2><div class="grid"><a class="card" href="pdf/kompendium-9-modulow.pdf" target="_blank" rel="noopener"><span class="n">Książka · 9 Modułów</span><h3>Kompendium Ortodonty 2.0 · 9 Modułów</h3><p>9 modułów od diagnostyki do wykończenia, z omówionymi przypadkami klinicznymi.</p><span class="meta">PDF · 111 stron</span><span class="go">Otwórz →</span></a><a class="card" href="pdf/podrecznik-retencji.pdf" target="_blank" rel="noopener"><span class="n">Przewodnik 2 / 5</span><h3>Podręcznik Retencji Ortodontycznej</h3><p>Aparaty retencyjne, protokoły i kontrola, aby zapobiegać nawrotom.</p><span class="meta">PDF · 19 stron</span><span class="go">Otwórz →</span></a><a class="card" href="pdf/atlas-rurek.pdf" target="_blank" rel="noopener"><span class="n">Przewodnik 3 / 5</span><h3>Atlas Rurek Ortodontycznych</h3><p>Rodzaje rurek, ich pozycjonowanie i na co zwracać uwagę w częstych problemach.</p><span class="meta">PDF · 15 stron</span><span class="go">Otwórz →</span></a><a class="card" href="pdf/urazy-i-ankyloza.pdf" target="_blank" rel="noopener"><span class="n">Przewodnik 4 / 5</span><h3>Urazy i Ankyloza</h3><p>Ocena i decyzja ortodontyczna przy zębach po urazie lub z ankylozą.</p><span class="meta">PDF · 15 stron</span><span class="go">Otwórz →</span></a><a class="card" href="pdf/atlas-ortopedii.pdf" target="_blank" rel="noopener"><span class="n">Przewodnik 5 / 5</span><h3>Kliniczny Atlas Ortopedii Zębowo-Twarzowej</h3><p>10 przypadków edukacyjnych pacjentów w okresie wzrostu.</p><span class="meta">PDF · 14 stron</span><span class="go">Otwórz →</span></a><a class="card" href="pdf/lista-pantomogramu.pdf" target="_blank" rel="noopener"><span class="n">Narzędzie 1 / 5</span><h3>Kompletna Lista Kontrolna Pantomogramu</h3><p>Jedna strona, aby nie pominąć żadnego etapu analizy.</p><span class="meta">PDF · 1 strona</span><span class="go">Otwórz →</span></a><a class="card" href="pdf/mapa-decyzyjna.pdf" target="_blank" rel="noopener"><span class="n">Narzędzie 2 / 5</span><h3>Mapa Decyzyjna: Ekstrakcja czy Zachowanie?</h3><p>Ścieżka decyzyjna, która porządkuje decyzję o ekstrakcji krok po kroku.</p><span class="meta">PDF · 6 stron</span><span class="go">Otwórz →</span></a><a class="card" href="pdf/detektor-klasy.pdf" target="_blank" rel="noopener"><span class="n">Narzędzie 3 / 5</span><h3>Wizualny Detektor: Klasa II vs Klasa III</h3><p>Zębowa czy szkieletowa? Kryteria różnicowania obok siebie.</p><span class="meta">PDF · 6 stron</span><span class="go">Otwórz →</span></a><a class="card" href="pdf/planer-4-etapy.pdf" target="_blank" rel="noopener"><span class="n">Narzędzie 4 / 5</span><h3>4-Etapowy Planer Kliniczny</h3><p>Diagnoza, cele, mechanika i wykończenie: planer do wypełnienia.</p><span class="meta">PDF · 7 stron</span><span class="go">Otwórz →</span></a><a class="card" href="pdf/radar-bledow.pdf" target="_blank" rel="noopener"><span class="n">Narzędzie 5 / 5</span><h3>Radar Błędów Planowania</h3><p>Błędy, które wydłużają leczenie, wychwycone przed naklejeniem zamków.</p><span class="meta">PDF · 6 stron</span><span class="go">Otwórz →</span></a></div></section>
+  <section class="sec"><h2>Od czego zacząć?</h2><ol class="pasos"><li>Zacząć od Modułu 01 i 02: jednorazowo przeczytać podstawy i kolejność diagnostyki całościowej.</li><li>Trzymać Mapy Wizualne otwarte w telefonie: każdy temat na jednej stronie, każda mapa odsyła do odpowiedniego modułu.</li><li>Przy każdym nowym przypadku wypełnić Kompletną Listę Kontrolną Pantomogramu i 4-Etapowy Planer Kliniczny.</li><li>Przed naklejeniem zamków przejść przez Radar Błędów Planowania.</li></ol></section>
+  <section class="sec next"><h2>Następny krok</h2><p>Proszę teraz otworzyć Mapy Wizualne i znaleźć mapę tematu, który budzi najwięcej wątpliwości, a następny nowy przypadek zacząć od Kompletnej Listy Kontrolnej Pantomogramu.</p><a class="btn" href="pdf/mapy-wizualne.pdf" target="_blank" rel="noopener">Otwórz Mapy Wizualne →</a></section>
+  <p class="foot">Wyłącznie do użytku osobistego. Odsprzedaż i dystrybucja zabronione. · Materiał edukacyjny; nie zastępuje badania klinicznego ani decyzji lekarza.</p>
+</main>
+</body>
+</html>
