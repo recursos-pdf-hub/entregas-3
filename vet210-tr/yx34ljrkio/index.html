@@ -1,31 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
-<title>Erişiminiz</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>210 Yorumlu Veteriner Klinik Vaka · Erişiminiz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Manrope:wght@700;800&display=swap&subset=latin-ext" rel="stylesheet">
 <style>
-  html, body { margin:0; background:#F4F9F7; color:#12221B; font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
-  .wrap { max-width:560px; margin:0 auto; padding:64px 20px; text-align:center; }
-  .badge { display:inline-block; font-size:12px; letter-spacing:.08em; text-transform:uppercase; background:#D6F3E6; color:#0D392A; padding:6px 12px; border-radius:99px; font-weight:700; }
-  h1 { font-family:Manrope,system-ui,sans-serif; font-size:26px; line-height:1.25; margin:18px 0 10px; }
-  p { font-size:17px; line-height:1.55; color:#51625A; }
-  .card { background:#fff; border:1px solid #CFDFD8; border-radius:16px; padding:24px 20px; margin-top:28px; }
-  .dot { display:inline-block; width:10px; height:10px; border-radius:50%; background:#E48233; margin-right:8px; animation:p 1.6s infinite; }
-  @keyframes p { 50% { opacity:.3; } }
-  @media (prefers-reduced-motion: reduce) { .dot { animation:none; } }
+:root{--bg:#F4F9F7;--paper:#FFFFFF;--ink:#12221B;--soft:#51625A;--acc:#E48233;--dark:#0D392A;--line:#CFDFD8;--chip:#D6F3E6}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--ink)}
+body{font-family:Inter,-apple-system,Arial,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Manrope,Arial,sans-serif;line-height:1.2;color:var(--dark)}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+.hero{background:var(--dark);color:#fff;padding:48px 0 70px;text-align:center}
+.hero .kicker{display:inline-block;background:var(--acc);border-radius:99px;padding:5px 14px;font-size:13px;font-weight:800;margin-bottom:14px}
+.hero h1{color:#fff;font-size:clamp(28px,6vw,44px);margin-bottom:10px}
+.hero p{font-size:17px;color:#BFD3CA;max-width:660px;margin:0 auto}
+.stats{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:22px}
+.stats span{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:99px;padding:8px 16px;font-weight:700;font-size:15px}
+.core{margin:-40px auto 36px;background:var(--paper);border:2px solid var(--acc);border-radius:20px;padding:24px;display:grid;grid-template-columns:200px 1fr;gap:24px;align-items:center;box-shadow:0 18px 40px rgba(13,57,42,.12)}
+.core img{width:100%;border-radius:12px}
+.tag{display:inline-block;background:var(--chip);color:var(--dark);border-radius:99px;padding:4px 12px;font-size:13px;font-weight:800;margin-bottom:10px}
+.core h2{font-size:clamp(22px,4vw,30px);margin-bottom:8px}
+.core p{color:var(--soft);margin-bottom:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:12px 26px;border-radius:12px;background:var(--acc);color:#fff;font-weight:800;font-size:17px;text-decoration:none;box-shadow:0 4px 0 #C96C22}
+.meta{font-size:13px;color:var(--soft)}
+.sec{margin:0 0 40px}
+.sec h2{font-size:clamp(22px,4vw,28px);margin-bottom:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:8px;text-decoration:none;transition:transform .12s,border-color .12s}
+.card:hover{transform:translateY(-2px);border-color:var(--acc)}
+.card .n{font-size:13px;font-weight:800;color:var(--acc)}
+.card h3{font-size:18px}
+.card p{color:var(--soft);font-size:15px;flex:1}
+.card .go{font-weight:800;color:var(--dark)}
+.bn img{width:100%;border-radius:10px;aspect-ratio:4/5;object-fit:cover;background:var(--chip)}
+.pasos{counter-reset:p;list-style:none;display:grid;gap:10px}
+.pasos li{counter-increment:p;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px 16px 14px 56px;position:relative}
+.pasos li:before{content:counter(p);position:absolute;left:14px;top:12px;width:30px;height:30px;border-radius:9px;background:var(--dark);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center}
+.next{background:var(--dark);color:#EEF3F1;border-radius:18px;padding:24px}
+.next h2{color:#fff}.next p{margin-bottom:14px;color:#BFD3CA}
+.foot{font-size:13px;color:var(--soft);text-align:center;margin:30px 0 40px}
+@media(max-width:620px){.core{grid-template-columns:1fr;text-align:center}.core img{max-width:220px;margin:0 auto}.btn{width:100%}}
 </style>
 </head>
 <body>
-  <div class="wrap">
-    <span class="badge">Satın alma onaylandı</span>
-    <h1>210 Yorumlu Veteriner Klinik Vaka · 5 Öğrenme Rotası + 3 Bonus Rehber</h1>
-    <p>Teşekkür ederiz! Materyalinizi hazırlamayı bitiriyoruz. Bu sayfa, tüm dosyalarınızla birlikte güncellenecek.</p>
-    <div class="card">
-      <p><span class="dot"></span><strong>Bu bağlantıyı kaydedin</strong></p>
-      <p>Bu, ömür boyu erişim bağlantınızdır. Birkaç saat sonra tekrar girin; 210 vakayı ve 3 bonusu burada bulacaksınız.</p>
-    </div>
-  </div>
+<header class="hero"><div class="wrap">
+<span class="kicker">Hoş geldiniz · Erişiminiz hazır</span>
+<h1>210 Yorumlu Veteriner Klinik Vaka</h1>
+<p>Belirtileri, tetkikleri ve tanıyı birbirine bağlamak için 5 öğrenme rotasında düzenlenmiş görsel ve yorumlu vakalar. Telefonda, tablette veya basılı olarak kullanın.</p>
+<div class="stats"><span>210 Vaka</span><span>5 Rota</span><span>3 Bonus</span></div>
+</div></header>
+<main class="wrap">
+<section class="core"><img src="img/kapak.jpg" alt=""><div><span class="tag">Ana içerik</span><h2>Tam kütüphane · 210 vaka</h2><p>Kullanım kılavuzu, içindekiler ve 5 rotanın tüm vakaları tek bir dosyada.</p><p class="meta">PDF · 215 sayfa · 14.9 MB</p><a class="btn" href="pdf/210-vaka-tam.pdf" target="_blank" rel="noopener">Tam kütüphaneyi aç →</a></div></section>
+<section class="sec"><h2>5 öğrenme rotası (ayrı dosyalar)</h2><div class="grid"><a class="card" href="pdf/rota-01.pdf" target="_blank" rel="noopener"><span class="n">Rota 01</span><h3>Küçük Hayvanlar ve Klinik Akıl Yürütme</h3><p>Vaka 001–040 · gastroenteroloji, dermatoloji, nöroloji, kardiyoloji, endokrinoloji, enfeksiyon</p><span class="meta">PDF · 41 sayfa</span><span class="go">Aç →</span></a><a class="card" href="pdf/rota-02.pdf" target="_blank" rel="noopener"><span class="n">Rota 02</span><h3>Tetkikler ve Tanısal Yorumlama</h3><p>Vaka 041–095 · hemogram, biyokimya, idrar analizi, sitoloji, görüntüleme</p><span class="meta">PDF · 56 sayfa</span><span class="go">Aç →</span></a><a class="card" href="pdf/rota-03.pdf" target="_blank" rel="noopener"><span class="n">Rota 03</span><h3>Acil Durumlar, Toksikoloji ve Anestezi</h3><p>Vaka 096–135 · acil, zehirlenmeler, akut değişiklikler, anestezi</p><span class="meta">PDF · 41 sayfa</span><span class="go">Aç →</span></a><a class="card" href="pdf/rota-04.pdf" target="_blank" rel="noopener"><span class="n">Rota 04</span><h3>Cerrahi, Üreme ve Neonatoloji</h3><p>Vaka 136–170 · cerrahi, gebelik, doğum, distosi, puerperyum</p><span class="meta">PDF · 36 sayfa</span><span class="go">Aç →</span></a><a class="card" href="pdf/rota-05.pdf" target="_blank" rel="noopener"><span class="n">Rota 05</span><h3>Büyük Hayvanlar, Üretim, Egzotikler ve Halk Sağlığı</h3><p>Vaka 171–210 · atlar, sığırlar, koyunlar, kanatlılar, sürüngenler, zoonozlar</p><span class="meta">PDF · 41 sayfa</span><span class="go">Aç →</span></a></div></section>
+<section class="sec"><h2>3 bonus</h2><div class="grid"><a class="card bn" href="pdf/bonus-01-klinik-rota.pdf" target="_blank" rel="noopener"><img src="img/bono-ruta.jpg" alt=""><span class="n">Bonus 01</span><h3>Klinik Rota: Nereden Başlamalı</h3><p>Klinik öğreniminizi düzenlemek ve önce neye öncelik vereceğinizi anlamak için görsel bir rehber.</p><span class="meta">PDF · 9 sayfa</span><span class="go">Aç →</span></a><a class="card bn" href="pdf/bonus-02-klinik-pekistirme-defteri.pdf" target="_blank" rel="noopener"><img src="img/bono-cuaderno.jpg" alt=""><span class="n">Bonus 02</span><h3>Klinik Pekiştirme Defteri</h3><p>Vaka okumalarını aktif hatırlamaya dönüştürmek için kartlar ve alıştırmalar.</p><span class="meta">PDF · 10 sayfa</span><span class="go">Aç →</span></a><a class="card bn" href="pdf/bonus-03-klinik-vakalari-takilmadan-sunun.pdf" target="_blank" rel="noopener"><img src="img/bono-presenta.jpg" alt=""><span class="n">Bonus 03</span><h3>Klinik Vakaları Takılmadan Sunun</h3><p>Akademik bir vaka sunumunu daha iyi düzenlemek için yapılar ve şablonlar.</p><span class="meta">PDF · 10 sayfa</span><span class="go">Aç →</span></a></div></section>
+<section class="sec"><h2>Nereden başlamalı?</h2><ol class="pasos">
+<li>Önce Bonus 01 · Klinik Rota'yı okuyun: her vakaya uygulayacağınız 5 adımlık yöntemi ve 8 haftalık planı verir.</li>
+<li>Rota 01 ile başlayın. Her vakada «Klinik durak» kutusunda durun ve çözüme bakmadan kendi hipotezlerinizi yazın.</li>
+<li>Akılda tutulacak noktaları Bonus 02 · Klinik Pekiştirme Defteri'ne kendi cümlelerinizle geçirin ve aralıklı tekrar takvimini kullanın.</li>
+<li>Haftada bir vakayı Bonus 03'teki 5 dakikalık şablonla yüksek sesle sunun.</li>
+</ol></section>
+<section class="sec next"><h2>Sonraki adım</h2><p>Bonus 01'i açın, ardından Rota 01'in ilk vakasını 25 dakikalık rutinle çözün.</p><a class="btn" href="pdf/bonus-01-klinik-rota.pdf" target="_blank" rel="noopener">Klinik Rota'yı aç →</a></section>
+<p class="foot">Bu sayfayı kaydedin: kalıcı erişim bağlantınızdır. Yalnızca kişisel kullanım içindir; yeniden satışı ve dağıtımı yasaktır. · Eğitim materyalidir: klinik muayenenin ve veteriner hekim kararının yerine geçmez.</p>
+</main>
 </body>
 </html>
