@@ -1,0 +1,522 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;padding:0;background:#F1F7FC}html{scroll-behavior:smooth}#ot-offer{scroll-margin-top:24px}@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.qz-cta::after,.qz-pulse{animation:none!important}}
+#qz,#qz *{box-sizing:border-box;margin:0;padding:0}
+#qz{
+  --bg:#F1F7FC; --card:#FFFFFF; --card2:#F7FBFE; --line:rgba(18,42,69,.13);
+  --ink:#122A45; --soft:#4E627A; --azul:#0F3157; --azul2:#17457A;
+  --acc:#1683CE; --acc2:#2A96DE; --acct:#116CB0; --suave:#CBE6F8;
+  --urg:#E0574A; --urg2:#C9443A; --ok:#1F9D6B;
+  --shadow:0 14px 34px -18px rgba(15,49,87,.45);
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  color:var(--ink); background:var(--bg);
+  max-width:540px; margin:0 auto; min-height:100vh; position:relative; -webkit-font-smoothing:antialiased;
+}
+#qz h1,#qz h2{font-family:'Lora',Georgia,serif;font-weight:700;line-height:1.14;letter-spacing:-.01em;color:var(--azul)}
+#qz .am{color:var(--acc)}
+
+#qz .qz-bar{height:5px;background:#DCE9F4;position:sticky;top:0;z-index:6}
+#qz .qz-bar-fill{height:100%;width:0;background:linear-gradient(90deg,var(--acc2),var(--acc));transition:width .45s cubic-bezier(.4,0,.2,1)}
+#qz .qz-top{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:#fff;border-bottom:1px solid var(--line)}
+#qz .qz-back{background:none;border:none;color:var(--soft);font-size:28px;line-height:1;cursor:pointer;width:30px;text-align:left;opacity:0;pointer-events:none;transition:opacity .2s}
+#qz .qz-back.show{opacity:1;pointer-events:auto}
+#qz .qz-logo{font-family:'Lora',serif;font-weight:700;font-size:15.5px;color:var(--azul)}
+#qz .qz-count{font-size:11.5px;font-weight:700;color:var(--acct);min-width:46px;text-align:right}
+
+#qz .qz-stage{padding:24px 18px 44px;animation:qzIn .38s cubic-bezier(.2,.7,.2,1)}
+@keyframes qzIn{from{opacity:0;transform:translateX(26px)}to{opacity:1;transform:none}}
+#qz .qz-phase{display:block;text-align:center;text-transform:uppercase;letter-spacing:.14em;font-size:11px;font-weight:700;color:var(--acct);margin-bottom:10px}
+#qz .qz-h{font-size:26px;text-align:center;margin-bottom:8px}
+#qz .qz-sub{text-align:center;color:var(--soft);font-size:15px;line-height:1.5;margin-bottom:20px}
+#qz .qz-hero{border-radius:18px;overflow:hidden;margin:0 0 18px;background:linear-gradient(160deg,#E6F1FA,#fff);border:1px solid var(--line)}
+#qz .qz-hero img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;display:block}
+#qz .qz-hero{margin-bottom:14px}
+#qz .qz-hero.intro{margin-bottom:12px}
+#qz .qz-hero.intro img{aspect-ratio:2/1}
+#qz .qz-intro .qz-h{font-size:23px}
+#qz .qz-intro .qz-sub{font-size:14px;margin-bottom:14px}
+#qz .qz-ask{text-align:center;font-weight:700;font-size:15px;color:var(--azul);margin:0 0 10px}
+#qz .qz-trust{text-align:center;font-size:12.5px;color:var(--soft);margin:14px 0 0}
+#qz .qz-trust b{color:var(--azul)}
+#qz .qz-skip{display:block;margin:12px auto 0;background:none;border:none;color:var(--acct);font-size:13px;font-weight:600;text-decoration:underline;cursor:pointer}
+
+#qz .qz-grid{display:grid;gap:11px}
+#qz .qz-card{display:flex;align-items:center;background:var(--card);border:1.5px solid var(--line);border-radius:14px;cursor:pointer;transition:transform .16s,border-color .16s,box-shadow .16s;box-shadow:0 6px 18px -14px rgba(15,49,87,.5)}
+#qz .qz-card:hover{border-color:var(--acc2);transform:translateY(-2px)}
+#qz .qz-card:active{transform:scale(.985)}
+#qz .qz-card.sel{border-color:var(--acc);box-shadow:0 0 0 2px var(--acc),0 10px 24px -12px rgba(22,131,206,.6);background:#F4FAFF}
+#qz .qz-label{padding:16px 15px;font-weight:600;font-size:15.5px;line-height:1.35}
+#qz .qz-cap{display:block;font-weight:500;font-size:12.5px;color:var(--soft);margin-top:2px}
+#qz .qz-arrow{margin-left:auto;margin-right:15px;color:var(--acc);font-size:24px;font-weight:700;line-height:1}
+#qz .qz-check{margin-left:auto;margin-right:14px;width:24px;height:24px;border-radius:7px;border:2px solid var(--line);flex:none;display:flex;align-items:center;justify-content:center;font-size:13px;color:#fff;transition:.15s}
+#qz .qz-card.sel .qz-check{background:var(--acc);border-color:var(--acc)}
+
+#qz .qz-cta{display:block;width:100%;margin-top:20px;padding:17px;border:none;border-radius:14px;font-family:inherit;font-weight:800;letter-spacing:.03em;font-size:16px;color:#fff;cursor:pointer;background:linear-gradient(140deg,var(--acc2),var(--acc));box-shadow:0 12px 26px -10px rgba(22,131,206,.75);transition:transform .15s,filter .2s;text-align:center;text-decoration:none;position:relative;overflow:hidden;text-transform:uppercase}
+#qz .qz-cta::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.38),transparent);transform:skewX(-20deg);animation:qzShine 3.2s infinite}
+@keyframes qzShine{0%{left:-60%}55%,100%{left:130%}}
+#qz .qz-cta:hover{transform:translateY(-2px);filter:brightness(1.04)}
+#qz .qz-cta:disabled{opacity:.35;cursor:not-allowed;transform:none}
+#qz .qz-cta:disabled::after{display:none}
+
+#qz .qz-input{width:100%;padding:17px;font-size:18px;text-align:center;font-family:inherit;color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:14px;outline:none}
+#qz .qz-input:focus{border-color:var(--acc);box-shadow:0 0 0 3px rgba(22,131,206,.15)}
+
+#qz .qz-inter{text-align:center;padding:10px 0}
+#qz .qz-icon{width:78px;height:78px;border-radius:50%;margin:4px auto 18px;display:flex;align-items:center;justify-content:center;font-size:34px;background:#fff;border:1.5px solid var(--suave);box-shadow:var(--shadow)}
+#qz .qz-inter .qz-photo{width:132px;height:132px;border-radius:50%;object-fit:cover;object-position:top;margin:4px auto 18px;display:block;border:4px solid #fff;box-shadow:var(--shadow);background:#E6F1FA}
+#qz .qz-inter h1{font-size:25px;margin-bottom:12px}
+#qz .qz-inter p{color:var(--soft);font-size:15.5px;line-height:1.6;max-width:420px;margin:0 auto}
+#qz .qz-quote{font-family:'Lora',serif;font-style:italic;color:var(--azul2);font-size:16px;margin:16px auto 0;max-width:380px}
+#qz .qz-big{font-family:'Lora',serif;font-weight:700;font-size:46px;color:var(--acc);line-height:1;margin:2px 0 6px}
+#qz .qz-empathy{background:#fff;border:1px solid var(--line);border-left:4px solid var(--acc);border-radius:12px;padding:15px 17px;margin-top:16px;text-align:left;animation:qzIn .35s}
+#qz .qz-empathy b{color:var(--azul);display:block;margin-bottom:5px;font-size:15px}
+#qz .qz-empathy p{color:var(--soft);font-size:14px;line-height:1.55}
+
+#qz .qz-sl-wrap{display:flex;flex-direction:column;align-items:center;width:100%;padding:14px 0;user-select:none;-webkit-user-select:none}
+#qz .qz-sl-val{font-family:'Lora',serif;font-size:2.7rem;font-weight:700;color:var(--azul);margin-bottom:18px;line-height:1}
+#qz .qz-sl-track-wrap{position:relative;width:100%;height:46px;display:flex;align-items:center;cursor:pointer;touch-action:none}
+#qz .qz-sl-track{position:absolute;left:0;right:0;height:7px;border-radius:4px;background:#DCE9F4}
+#qz .qz-sl-fill{position:absolute;left:0;top:0;height:100%;border-radius:4px;background:linear-gradient(90deg,var(--acc2),var(--acc));pointer-events:none}
+#qz .qz-sl-thumb{position:absolute;top:50%;width:30px;height:30px;border-radius:50%;background:#fff;border:3px solid var(--acc);box-shadow:0 4px 14px rgba(22,131,206,.45);transform:translate(-50%,-50%);cursor:grab;z-index:2}
+#qz .qz-sl-ends{display:flex;justify-content:space-between;width:100%;font-size:12px;color:var(--soft);margin-top:6px}
+
+#qz .qz-loader{text-align:center;padding:30px 0}
+#qz .qz-pulse{font-size:44px;animation:qzPulse 1s ease-in-out infinite}
+@keyframes qzPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
+#qz .qz-ring{font-family:'Lora',serif;font-weight:700;font-size:44px;color:var(--acc);margin-top:10px}
+#qz .qz-ltrack{height:9px;background:#DCE9F4;border-radius:6px;overflow:hidden;margin:18px 0}
+#qz .qz-lfill{height:100%;width:0;background:linear-gradient(90deg,var(--acc2),var(--acc));transition:width .25s}
+#qz .qz-steps{list-style:none;text-align:left;max-width:360px;margin:6px auto 0;display:grid;gap:10px}
+#qz .qz-steps li{display:flex;gap:10px;align-items:center;font-size:14.5px;color:var(--soft);opacity:.45;transition:opacity .3s}
+#qz .qz-steps li.on{opacity:1;color:var(--ink)}
+#qz .qz-steps li .d{width:22px;height:22px;border-radius:50%;border:2px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:12px;flex:none}
+#qz .qz-steps li.on .d{background:var(--ok);border-color:var(--ok);color:#fff}
+
+#qz .qz-result{text-align:center}
+#qz .qz-gg-wrap{display:flex;flex-direction:column;align-items:center;width:100%;margin:6px 0 4px}
+#qz .qz-gg-svg{width:100%;max-width:270px;display:block;margin:0 auto;overflow:visible}
+#qz .qz-gg-value{font-family:'Lora',serif;font-size:2.5rem;font-weight:700;color:var(--azul);line-height:1;margin-top:-20px}
+#qz .qz-gg-sub{font-size:12.5px;color:var(--soft);margin-top:4px}
+#qz .qz-vs{display:flex;gap:12px;margin:18px 0}
+#qz .qz-vs > div{flex:1;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 8px;text-align:center;box-shadow:var(--shadow)}
+#qz .qz-vs .lab{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--soft);font-weight:700}
+#qz .qz-vs .v{font-family:'Lora',serif;font-weight:700;font-size:24px;margin-top:4px}
+#qz .qz-vs .now .v{color:var(--urg)} #qz .qz-vs .goal .v{color:var(--ok)}
+#qz .qz-note{background:#fff;border:1px solid var(--line);border-radius:12px;padding:13px 15px;text-align:left;font-size:14px;color:var(--soft);line-height:1.5;margin:12px 0}
+#qz .qz-note b{color:var(--ink)}
+#qz .qz-map{text-align:left;margin:20px 0 6px}
+#qz .qz-map-h{font-family:'Lora',serif;font-weight:700;font-size:19px;color:var(--azul);margin-bottom:12px;text-align:center}
+#qz .qz-mi{display:flex;gap:12px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:13px;padding:10px;margin-bottom:10px;opacity:0;transform:translateX(-12px);transition:opacity .4s,transform .4s;box-shadow:0 8px 20px -16px rgba(15,49,87,.6)}
+#qz .qz-mi.in{opacity:1;transform:none}
+#qz .qz-mi img{width:58px;height:72px;object-fit:cover;object-position:top;border-radius:8px;flex:none;background:#E6F1FA;border:1px solid var(--line)}
+#qz .qz-mi b{display:block;font-size:14.5px;color:var(--ink);margin-bottom:3px}
+#qz .qz-mi span{display:block;font-size:12.8px;color:var(--soft);line-height:1.4}
+
+#qz .qz-timer{position:sticky;top:0;z-index:7;background:linear-gradient(90deg,var(--urg2),var(--urg));color:#fff;text-align:center;padding:11px 10px;font-weight:700;font-size:14px}
+#qz .qz-timer span{font-variant-numeric:tabular-nums;background:rgba(255,255,255,.2);padding:2px 9px;border-radius:20px;margin-left:6px}
+#qz .qz-salebody{padding:24px 18px 44px}
+#qz .qz-sec{margin:28px 0}
+#qz .qz-sec-h{font-family:'Lora',serif;font-weight:700;font-size:22px;text-align:center;margin-bottom:14px;color:var(--azul)}
+#qz .qz-img{width:100%;border-radius:16px;overflow:hidden;background:#fff;border:1px solid var(--line);margin:14px 0}
+#qz .qz-img img{width:100%;height:auto;display:block}
+#qz .qz-chips{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;margin-top:10px}
+#qz .qz-chips span{background:#fff;border:1px solid var(--suave);color:var(--acct);font-size:12.5px;font-weight:700;padding:5px 11px;border-radius:999px}
+#qz .qz-pack{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:12px;box-shadow:var(--shadow)}
+#qz .qz-pack h3{font-family:'Lora',serif;font-size:17px;color:var(--azul);margin-bottom:10px}
+#qz .qz-thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-bottom:10px}
+#qz .qz-thumbs img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:9px;background:#E6F1FA}
+#qz .qz-thumbs.maps img{aspect-ratio:4/5;object-position:top}
+#qz .qz-li{list-style:none;display:grid;gap:7px}
+#qz .qz-li li{position:relative;padding-left:22px;font-size:13.8px;color:var(--soft);line-height:1.45}
+#qz .qz-li li::before{content:'✓';position:absolute;left:0;color:var(--ok);font-weight:800}
+#qz .qz-li li b{color:var(--ink)}
+#qz .qz-price{background:#fff;border:2px solid var(--acc);border-radius:18px;padding:20px 18px;text-align:center;box-shadow:0 18px 40px -20px rgba(22,131,206,.6)}
+#qz .qz-price .lab{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--soft);font-weight:700}
+#qz .qz-price .old{color:var(--soft);text-decoration:line-through;font-size:16px;margin-top:6px}
+#qz .qz-price .now{font-family:'Lora',serif;font-weight:700;font-size:40px;color:var(--azul);line-height:1.1;margin:4px 0}
+#qz .qz-price .off{display:inline-block;background:var(--urg);color:#fff;font-size:12px;font-weight:800;padding:3px 10px;border-radius:20px;margin-bottom:6px}
+#qz .qz-price .note{font-size:12.5px;color:var(--soft);margin-top:10px}
+#qz .qz-pay{margin:14px auto 0;max-width:360px}
+#qz .qz-pay img{width:100%;height:auto;display:block}
+#qz .qz-guar{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-left:4px solid var(--ok);border-radius:13px;padding:15px;margin:18px 0;font-size:13.5px;color:var(--soft);line-height:1.5}
+#qz .qz-guar .ic{font-size:26px;line-height:1}
+#qz .qz-guar b{color:var(--ink)}
+#qz .qz-guar ul{margin:6px 0 0 16px}
+#qz .qz-auth{display:flex;gap:14px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px;box-shadow:var(--shadow)}
+#qz .qz-auth img{width:74px;height:74px;border-radius:50%;object-fit:cover;object-position:top;flex:none;background:#E6F1FA}
+#qz .qz-auth b{font-family:'Lora',serif;font-size:17px;color:var(--azul);display:block}
+#qz .qz-auth span{font-size:13px;color:var(--soft);display:block;margin-top:2px}
+#qz .qz-auth .num{color:var(--acc);font-weight:800}
+#qz .qz-tst{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:2px 2px 12px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+#qz .qz-tst::-webkit-scrollbar{display:none}
+#qz .qz-tst .c{flex:0 0 82%;scroll-snap-align:start;background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;box-shadow:0 8px 20px -16px rgba(15,49,87,.55)}
+#qz .qz-tst .vf{display:block;color:var(--ok);font-weight:700;font-size:11.5px;margin-top:3px}
+#qz .qz-tst-ctl{display:flex;justify-content:space-between;align-items:center;margin-top:4px}
+#qz .qz-tst-ctl .hint{font-size:12px;color:var(--soft)}
+#qz .qz-tst-ctl button{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--acct);font-size:21px;cursor:pointer;margin-left:6px;line-height:1}
+#qz .qz-tst-ctl button:disabled{opacity:.3;cursor:default}
+#qz .qz-tst-sub{text-align:center;color:var(--soft);font-size:13.5px;margin:-6px 0 14px}
+#qz .qz-tst .stars{color:#F5A623;font-size:13px;letter-spacing:2px}
+#qz .qz-tst .q{font-size:14px;line-height:1.55;margin:6px 0 8px;font-style:italic}
+#qz .qz-tst .who{font-size:12.5px;color:var(--soft)}
+#qz .qz-tst .who b{color:var(--ink)}
+#qz .qz-tst img.cap{width:100%;border-radius:10px;display:block}
+#qz .qz-faq .it{border-bottom:1px solid var(--line)}
+#qz .qz-faq .q{width:100%;text-align:left;background:none;border:none;color:var(--ink);font-family:inherit;font-size:15px;font-weight:700;padding:15px 30px 15px 0;cursor:pointer;position:relative}
+#qz .qz-faq .q::after{content:'+';position:absolute;right:4px;top:12px;font-size:21px;color:var(--acc)}
+#qz .qz-faq .it.open .q::after{content:'–'}
+#qz .qz-faq .a{max-height:0;overflow:hidden;transition:max-height .25s ease;color:var(--soft);font-size:14px;line-height:1.55}
+#qz .qz-faq .it.open .a{max-height:320px;padding-bottom:14px}
+#qz .qz-disc{font-size:11px;color:#7C8DA2;text-align:center;margin-top:20px;line-height:1.55}
+#qz .qz-disc a{color:inherit}
+</style>
+<div id="qz">
+  <div class="qz-bar"><div class="qz-bar-fill" id="qzBar"></div></div>
+  <header class="qz-top" id="qzTop">
+    <button class="qz-back" id="qzBack" aria-label="Назад">‹</button>
+    <span class="qz-logo">Библията на ортодонта</span>
+    <span class="qz-count" id="qzCount"></span>
+  </header>
+  <main class="qz-stage" id="qzStage"></main>
+</div>
+
+<span id="qz-price" hidden>{{price}}</span>
+<span id="qz-price-old" hidden>{{original_price}}</span><span id="qz-save" hidden>{{savings}}</span>
+<script>
+(function(){
+var W = 'https://recursos-pdf-hub.github.io/entregas-3/ortodoncista-bg/landing-img/';
+var CONFIG = {
+  TIMER_MIN: 10,
+  IMG: {
+    portada: W + 'korica.webp',
+    bundle:  W + 'paket.webp'
+  },
+  GUIAS: [
+    { img: W+'01-kniga.webp', t:'Библията на ортодонта 2.0', d:'9 модула от диагнозата до финиширането, с коментирани клинични случаи.' },
+    { img: W+'02-retenciya.webp', t:'Наръчник за ортодонтска ретенция', d:'За да завършите лечението и да запазите резултата.' },
+    { img: W+'03-tubusi.webp', t:'Атлас на ортодонтските тубуси', d:'Визуален справочник за ортодонтските тубуси.' },
+    { img: W+'04-travma.webp', t:'Травма и анкилоза', d:'Какво да проверите при тези случаи в ортодонтията и как да ги водите.' },
+    { img: W+'05-ortopediya.webp', t:'Клиничен атлас по дентофациална ортопедия', d:'10 учебни случая на пациенти в растеж.' }
+  ],
+  HERRAMIENTAS: [
+    { img: W+'i1-cheklist-panoramna.webp', t:'Чеклист за панорамна рентгенография без пропуски', d:'Една страница, за да не пропуснете нито една стъпка от анализа.' },
+    { img: W+'i2-karta-reshenie.webp', t:'Карта за решение: екстракция или запазване?', d:'Блок-схема, която подрежда най-честата дилема.' },
+    { img: W+'i3-detektor-klas.webp', t:'Визуален детектор: клас II срещу клас III', d:'За да различите с един поглед денталното от скелетното.' },
+    { img: W+'i4-planer.webp', t:'Клиничен планер в 4 етапа', d:'Диагноза → цели → механика → финиширане.' },
+    { img: W+'i5-radar.webp', t:'Радар за грешки в планирането', d:'За да видите предварително грешките, които удължават лечението.' }
+  ],
+  MAPAS: {
+    angle:      W+'karta-01-angle.webp',
+    tipos:      W+'karta-02-malokluzii.webp',
+    cefalo:     W+'karta-03-cefalometriya.webp',
+    abierta:    W+'karta-04-otvorena-zahapka.webp',
+    profunda:   W+'karta-05-dalboka-zahapka.webp',
+    cruzada:    W+'karta-06-krastosana-zahapka.webp',
+    crecimiento:W+'karta-08-rastezh.webp',
+    anclaje:    W+'karta-11-ankorazh.webp',
+    espacio:    W+'karta-18-analiz-myasto.webp',
+    planif:     W+'karta-19-planirane.webp',
+    retencion:  W+'karta-20-retenciya.webp',
+    funcionales:W+'karta-15-funkcionalni.webp'
+  },
+  RESUELVE: {
+    'Клас II':                              { map:'angle',      r:'Модул 05 · Сагитални проблеми + Визуален детектор: клас II срещу клас III' },
+    'Клас III':                             { map:'tipos',      r:'Модул 05 · Сагитални проблеми + Визуален детектор: клас II срещу клас III' },
+    'Екстракция или не':                    { map:'espacio',    r:'Модул 04 · Управление на мястото + Карта за решение: екстракция или запазване?' },
+    'Скупченост и липса на място':          { map:'espacio',    r:'Модул 04 · Управление на мястото: IPR, разширение и екстракции' },
+    'Отворена захапка':                     { map:'abierta',    r:'Модул 06 · Вертикални и трансверзални проблеми' },
+    'Дълбока захапка':                      { map:'profunda',   r:'Модул 06 · Вертикални и трансверзални проблеми' },
+    'Кръстосана захапка':                   { map:'cruzada',    r:'Модул 06 · Вертикални и трансверзални проблеми' },
+    'Анкораж и мини винтове':               { map:'anclaje',    r:'Модул 04 · Анкораж с мини винтове + Модул 07 · Помощни механики' },
+    'Диагноза и панорамна рентгенография':  { map:'cefalo',     r:'Модул 02 · Цялостна диагностика + Чеклист за панорамна рентгенография без пропуски' },
+    'Финиширане и средна линия':            { map:'planif',     r:'Модул 08 · Финиширане и стабилност + Клиничен планер в 4 етапа' },
+    'Ретенция и рецидив':                   { map:'retencion',  r:'Наръчник за ортодонтска ретенция' },
+    'Пациенти в растеж':                    { map:'crecimiento',r:'Клиничен атлас по дентофациална ортопедия' }
+  },
+  TESTIMONIALS: [],
+  FAQ: [
+    { q:'Как получавам достъпа?', a:'Веднага след потвърждаване на плащането достъпът пристига на Вашия имейл. Всичко е в PDF: отваряте го на телефон, таблет или компютър. Няма физическа доставка.' },
+    { q:'Еднократно плащане ли е?', a:'Да. Плащате веднъж, ръководствата остават Ваши, а бъдещите актуализации са включени. Без абонамент и без повтарящи се плащания.' },
+    { q:'Вече имам Proffit и Graber. Защо ми е още един източник?', a:'Не се конкурира с тях, а ги допълва. Разликата е във формата: това ръководство е създадено, за да го прегледате за пет минути между двама пациенти. С книга от 800 страници това не става.' },
+    { q:'Нямам време да чета още един PDF.', a:'Не е нужно да го четете от началото до края. Подреден е по тип случай: отваряте го, когато случаят е пред Вас, и отивате направо на това, което Ви трябва.' },
+    { q:'Полезно ли е, ако вече имам няколко години опит?', a:'Да. Колкото по-малко опит имате, толкова повече Ви дава. А ако работите от години, подрежда в система това, което вече знаете.' },
+    { q:'А ако не ми свърши работа?', a:'7-дневна гаранция с прилагане. Приложете го. Ако сте го приложили и не Ви е свършило работа, връщаме парите Ви.' }
+  ],
+  STEPS: [
+    { type:'cards', key:'perfil', phase:'Тест за клинична увереност · 2 минути', hero:'portada', intro:true,
+      h:'Колко уверено решавате един сложен <span class="am">случай</span>?',
+      sub:'Накрая ще получите безплатната си клинична карта: какво да проверите във всеки случай, който днес Ви поражда съмнение.',
+      ask:'За начало: какъв е Вашият профил?',
+      opts:[{t:'Ортодонт съм'},{t:'Лекар по дентална медицина съм и работя и ортодонтия'},{t:'Специализант съм'}] },
+    { type:'inter', phase:'Преди да започнем', icon:'📚', big:'120',
+      h:'визуални карти, 9 модула и 5 клинични инструмента <span class="am">в една система</span>',
+      body:'Библията на ортодонта е подредена по тип случай, за да я отворите и между двама пациенти. Всяка карта Ви препраща към страницата, където темата е обяснена изцяло.' },
+    { type:'cards', key:'anios', phase:'Вашата практика', h:'От колко години се занимавате с ортодонтия?',
+      opts:[{t:'По-малко от 2 години'},{t:'От 2 до 5 години'},{t:'От 5 до 10 години'},{t:'Повече от 10 години'}] },
+    { type:'multi', key:'dudas', phase:'Вашата практика', h:'Кои случаи Ви пораждат <span class="am">най-много съмнения</span>?', sub:'Изберете всички подходящи',
+      opts:[{t:'Клас II'},{t:'Клас III'},{t:'Екстракция или не'},{t:'Скупченост и липса на място'},{t:'Отворена захапка'},{t:'Дълбока захапка'},{t:'Кръстосана захапка'},{t:'Анкораж и мини винтове'},{t:'Диагноза и панорамна рентгенография'},{t:'Финиширане и средна линия'},{t:'Ретенция и рецидив'},{t:'Пациенти в растеж'}] },
+    { type:'cards', key:'reaccion', phase:'Когато пациентът е пред Вас', h:'Идва сложен случай. Какво <span class="am">обикновено</span> правите?',
+      opts:[{t:'Решавам на момента, дори да не съм 100% сигурен'},{t:'Отлагам и проверявам в книги или в записките си'},{t:'Питам колеги в групите'},{t:'Започвам и коригирам в движение'}] },
+    { type:'empathy', key:'blanco', phase:'Когато пациентът е пред Вас', h:'Случвало ли Ви се е да <span class="am">блокирате</span> пред пациента?', sub:'Никой не вижда отговорите Ви',
+      opts:[{t:'Да, неведнъж'},{t:'Случи ми се при конкретен случай'},{t:'Бях несигурен, но не пролича'},{t:'Никога'}],
+      box:{ title:'Това не е липса на знания', text:'Случва се на повечето, дори никой да не го казва на глас. Ако четете това: проблемът е, че в момента на решението отговорът не е под ръка. Това не се решава с още един курс, а със справочна система.' } },
+    { type:'multi', key:'fuentes', phase:'Когато пациентът е пред Вас', h:'Къде търсите отговора днес?', sub:'Изберете всички подходящи',
+      opts:[{t:'Proffit, Graber или други книги'},{t:'Записки от курсове и конгреси'},{t:'YouTube или Instagram'},{t:'Групи за съобщения с колеги'},{t:'Нямам нищо под ръка'}] },
+    { type:'inter', phase:'Какво трябва да знаете', icon:'💡',
+      h:'Всеки лошо решен случай <span class="am">струва повече</span> от който и да е курс',
+      body:'Книга от 800 страници не се преглежда за 5 минути между двама пациенти. Нужно е решение, подредено по тип случай: какво да проверите, какви варианти имате и кога кой да изберете.',
+      quote:'„Теорията вече я имате. Липсва Ви тя да е под ръка, когато пациентът е на стола.“' },
+    { type:'cards', key:'alargue', phase:'Вашите лечения', h:'Случвало ли се е лечение да се проточи месеци <span class="am">без промяна</span>?',
+      opts:[{t:'Да, неведнъж'},{t:'Понякога'},{t:'Не, никога'}] },
+    { type:'slider', key:'casos', phase:'Вашите лечения', h:'Колко сложни случая виждате на месец?', sub:'Плъзнете скалата', min:1, max:40, value:8, step:1, unit:'случая', ends:['1','40+'] },
+    { type:'slider', key:'seguridad', phase:'Вашите лечения', h:'От 1 до 10: колко сигурен се чувствате, когато решавате <span class="am">дали да има екстракция</span>?', sub:'1 = никак · 10 = напълно', min:1, max:10, value:5, step:1, unit:'', ends:['Никак','Напълно'] },
+    { type:'cards', key:'formato', phase:'Вашата система', h:'Как бихте искали да го използвате?',
+      opts:[{t:'На телефона, между двама пациенти'},{t:'Разпечатано, в кабинета'},{t:'И двете'}] },
+    { type:'commit', phase:'Вашата система', h:'Искате ли решението да е <span class="am">подредено още преди</span> пациентът да влезе?',
+      opts:[{t:'Да, искам да започна още днес'},{t:'Да, но първо искам да го видя отвътре'}] },
+    { type:'input', key:'name', phase:'Последна стъпка', h:'Как се <span class="am">казвате</span>?', sub:'За да подготвим клиничната карта на Ваше име', placeholder:'Вашето име' }
+  ]
+};
+var stage=document.getElementById('qzStage'), bar=document.getElementById('qzBar'),
+    backBtn=document.getElementById('qzBack'), countEl=document.getElementById('qzCount');
+var state={ i:0, answers:{} };
+var STEPS=CONFIG.STEPS, TOTAL=STEPS.length;
+
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function txt(id){ var el=document.getElementById(id); var v=el?el.textContent.trim():''; return /\{\{/.test(v)?'':v; }
+function num(s){ s=(s||'').replace(/[^\d.,]/g,''); var i=Math.max(s.lastIndexOf('.'),s.lastIndexOf(','));
+  if(i>-1&&s.length-i-1<=2){ s=s.slice(0,i).replace(/[.,]/g,'')+'.'+s.slice(i+1); } else { s=s.replace(/[.,]/g,''); } return parseFloat(s); }
+var PRICE=txt('qz-price'), OLD=txt('qz-price-old'), SAVE=txt('qz-save');
+var PCT=(num(PRICE)>0&&num(OLD)>num(PRICE))?Math.round((1-num(PRICE)/num(OLD))*100):0;
+function buzz(){ if(navigator.vibrate) navigator.vibrate(10); }
+
+
+function buy(e){ var a=e&&e.currentTarget; if(e) e.preventDefault(); window.location.href=(a&&a.href)||'/checkout'; }
+
+function setProgress(){ var pct=Math.min(100,Math.round(state.i/TOTAL*100));
+  bar.style.width=pct+'%'; countEl.textContent=(state.i>0&&state.i<TOTAL?(state.i+1)+'/'+TOTAL:'');
+  backBtn.classList.toggle('show', state.i>0 && state.i<TOTAL); }
+function go(n){ state.i=n; render(); window.scrollTo(0,0); }
+backBtn.onclick=function(){ if(state.i>0) go(state.i-1); };
+
+function slider(o){
+  var cur=o.value, wrap=document.createElement('div'); wrap.className='qz-sl-wrap';
+  wrap.innerHTML='<div class="qz-sl-val"></div><div class="qz-sl-track-wrap"><div class="qz-sl-track"><div class="qz-sl-fill"></div><div class="qz-sl-thumb"></div></div></div>'+
+    (o.ends?'<div class="qz-sl-ends"><span>'+esc(o.ends[0])+'</span><span>'+esc(o.ends[1])+'</span></div>':'');
+  var val=wrap.querySelector('.qz-sl-val'), tw=wrap.querySelector('.qz-sl-track-wrap'), track=wrap.querySelector('.qz-sl-track'),
+      fill=wrap.querySelector('.qz-sl-fill'), thumb=wrap.querySelector('.qz-sl-thumb');
+  function draw(){ var p=(cur-o.min)/(o.max-o.min)*100; val.textContent=cur+(o.unit?' '+o.unit:''); fill.style.width=p+'%'; thumb.style.left=p+'%'; }
+  function fromX(x){ var r=track.getBoundingClientRect(); var v=Math.round(((x-r.left)/r.width*(o.max-o.min)+o.min)/o.step)*o.step; return Math.min(o.max,Math.max(o.min,v)); }
+  function set(v){ if(v!==cur){ cur=v; draw(); if(navigator.vibrate) navigator.vibrate(6); } }
+  var drag=false;
+  tw.addEventListener('pointerdown',function(e){ drag=true; tw.setPointerCapture&&tw.setPointerCapture(e.pointerId); set(fromX(e.clientX)); });
+  tw.addEventListener('pointermove',function(e){ if(drag) set(fromX(e.clientX)); });
+  tw.addEventListener('pointerup',function(){ drag=false; });
+  tw.addEventListener('pointercancel',function(){ drag=false; });
+  wrap.getValue=function(){ return cur; }; draw(); return wrap;
+}
+
+function render(){
+  setProgress();
+  if(state.i>=TOTAL) return runLoader();
+  var s=STEPS[state.i], html='';
+  stage.className='qz-stage'+(s.intro?' qz-intro':'');
+  if(s.type!=='inter'){
+    if(s.hero) html+='<div class="qz-hero'+(s.intro?' intro':'')+'"><img src="'+CONFIG.IMG[s.hero]+'" alt="Визуална карта от Библията на ортодонта на таблет, в кабинета" fetchpriority="high"></div>';
+    if(s.phase) html+='<span class="qz-phase">'+esc(s.phase)+'</span>';
+    if(s.h) html+='<h1 class="qz-h">'+s.h+'</h1>';
+    if(s.sub) html+='<p class="qz-sub">'+esc(s.sub)+'</p>';
+    if(s.ask) html+='<p class="qz-ask">'+esc(s.ask)+'</p>';
+  }
+  if(s.type==='cards'||s.type==='commit'){
+    html+='<div class="qz-grid">';
+    s.opts.forEach(function(o,idx){ html+='<div class="qz-card" data-i="'+idx+'"><div class="qz-label">'+esc(o.t)+(o.cap?'<span class="qz-cap">'+esc(o.cap)+'</span>':'')+'</div><span class="qz-arrow">›</span></div>'; });
+    html+='</div>';
+    if(s.intro) html+='<p class="qz-trust"><b>120</b> визуални карти · <b>9</b> модула · <b>5</b> клинични инструмента</p><button type="button" class="qz-skip" id="qzSkip">Предпочитам да видя ръководството направо →</button>';
+    stage.innerHTML=html;
+    if(s.intro) document.getElementById('qzSkip').onclick=function(){ renderSale(); window.scrollTo(0,0); };
+    stage.querySelectorAll('.qz-card').forEach(function(c){ c.onclick=function(){
+      if(c.classList.contains('sel')) return;
+      stage.querySelectorAll('.qz-card').forEach(function(x){ x.classList.remove('sel'); });
+      c.classList.add('sel'); if(s.key) state.answers[s.key]=s.opts[c.dataset.i].t; buzz();
+      setTimeout(function(){ go(state.i+1); },280); }; });
+    return;
+  }
+  if(s.type==='multi'||s.type==='empathy'){
+    var prev=state.answers[s.key]||[];
+    html+='<div class="qz-grid">';
+    s.opts.forEach(function(o,idx){ html+='<div class="qz-card'+(prev.indexOf(o.t)>-1?' sel':'')+'" data-i="'+idx+'"><div class="qz-label">'+esc(o.t)+'</div><span class="qz-check">✓</span></div>'; });
+    html+='</div>';
+    if(s.type==='empathy') html+='<div id="qzBox" style="display:none"><div class="qz-empathy"><b>'+esc(s.box.title)+'</b><p>'+esc(s.box.text)+'</p></div></div>';
+    html+='<button class="qz-cta" id="qzNext"'+(prev.length?'':' disabled')+'>Напред</button>';
+    stage.innerHTML=html;
+    var cards=stage.querySelectorAll('.qz-card');
+    function picked(){ return [].filter.call(cards,function(c){ return c.classList.contains('sel'); }); }
+    cards.forEach(function(c){ c.onclick=function(){
+      if(s.type==='empathy'){ cards.forEach(function(x){ if(x!==c) x.classList.remove('sel'); }); }
+      c.classList.toggle('sel'); buzz();
+      var any=picked().length>0; document.getElementById('qzNext').disabled=!any;
+      if(s.type==='empathy'){ document.getElementById('qzBox').style.display=any?'block':'none'; } }; });
+    document.getElementById('qzNext').onclick=function(){
+      state.answers[s.key]=picked().map(function(c){ return s.opts[c.dataset.i].t; });
+      if(s.type==='empathy') state.answers[s.key]=state.answers[s.key][0];
+      go(state.i+1); };
+    return;
+  }
+  if(s.type==='inter'){
+    html='';
+    if(s.phase) html+='<span class="qz-phase">'+esc(s.phase)+'</span>';
+    html+='<div class="qz-inter">'+
+      (s.photo?'<img loading="lazy" class="qz-photo" src="'+CONFIG.IMG[s.photo]+'" alt="">':'<div class="qz-icon">'+(s.icon||'💡')+'</div>')+
+      (s.big?'<div class="qz-big">'+esc(s.big)+'</div>':'')+
+      '<h1>'+(s.h||'')+'</h1><p>'+esc(s.body||'')+'</p>'+(s.quote?'<p class="qz-quote">'+esc(s.quote)+'</p>':'')+'</div>';
+    html+='<button class="qz-cta" id="qzNext">Напред</button>';
+    stage.innerHTML=html; document.getElementById('qzNext').onclick=function(){ go(state.i+1); };
+    return;
+  }
+  if(s.type==='slider'){
+    html+='<div id="qzSl"></div><button class="qz-cta" id="qzNext">Напред</button>';
+    stage.innerHTML=html;
+    var sl=slider({min:s.min,max:s.max,value:(state.answers[s.key]||s.value),step:s.step||1,unit:s.unit||'',ends:s.ends});
+    document.getElementById('qzSl').appendChild(sl);
+    document.getElementById('qzNext').onclick=function(){ state.answers[s.key]=sl.getValue(); go(state.i+1); };
+    return;
+  }
+  if(s.type==='input'){
+    html+='<input class="qz-input" id="qzIn" placeholder="'+esc(s.placeholder||'')+'" autocomplete="given-name" value="'+esc(state.answers[s.key]||'')+'">';
+    html+='<button class="qz-cta" id="qzNext"'+(state.answers[s.key]?'':' disabled')+'>Вижте резултата си</button>';
+    stage.innerHTML=html;
+    var inp=document.getElementById('qzIn'), nx=document.getElementById('qzNext');
+    inp.oninput=function(){ nx.disabled=!inp.value.trim(); };
+    inp.onkeydown=function(e){ if(e.key==='Enter'&&inp.value.trim()) nx.click(); };
+    nx.onclick=function(){ state.answers[s.key]=inp.value.trim().slice(0,30); go(state.i+1); };
+    return;
+  }
+}
+
+
+function runLoader(){
+  bar.style.width='100%'; countEl.textContent=''; backBtn.classList.remove('show');
+  var msgs=['Съпоставяме съмненията Ви с 9-те модула на Библията','Избираме визуалните Ви карти','Подготвяме инструментите Ви за кабинета','Изчисляваме индекса Ви на клинична увереност'];
+  stage.innerHTML='<div class="qz-loader"><div class="qz-pulse">🦷</div><div class="qz-ring" id="qzPct">0%</div>'+
+    '<div class="qz-ltrack"><div class="qz-lfill" id="qzLF"></div></div>'+
+    '<ul class="qz-steps">'+msgs.map(function(m){ return '<li><span class="d">✓</span>'+esc(m)+'</li>'; }).join('')+'</ul></div>';
+  var p=0, pctEl=document.getElementById('qzPct'), lf=document.getElementById('qzLF'), lis=stage.querySelectorAll('.qz-steps li');
+  var iv=setInterval(function(){ p+=Math.random()*6+2.5; if(p>=100) p=100;
+    pctEl.textContent=Math.floor(p)+'%'; lf.style.width=p+'%';
+    lis.forEach(function(li,k){ li.classList.toggle('on', p>=(k+1)*24); });
+    if(p>=100){ clearInterval(iv); setTimeout(renderResult,600); } },170);
+}
+
+function gauge(value,sub){
+  var ns='http://www.w3.org/2000/svg', wrap=document.createElement('div'); wrap.className='qz-gg-wrap';
+  var svg=document.createElementNS(ns,'svg'); svg.setAttribute('viewBox','0 0 200 110'); svg.setAttribute('class','qz-gg-svg');
+  svg.innerHTML='<defs><linearGradient id="qzgg" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#E0574A"/><stop offset="55%" stop-color="#F5A623"/><stop offset="100%" stop-color="#1F9D6B"/></linearGradient></defs>'+
+    '<path d="M20,100 A80,80 0 0,1 180,100" fill="none" stroke="#DCE9F4" stroke-width="14" stroke-linecap="round"/>'+
+    '<path id="qzArc" fill="none" stroke="url(#qzgg)" stroke-width="14" stroke-linecap="round"/>'+
+    '<line id="qzNeedle" x1="100" y1="100" stroke="#0F3157" stroke-width="3" stroke-linecap="round"/><circle cx="100" cy="100" r="6" fill="#0F3157"/>';
+  var v=document.createElement('div'); v.className='qz-gg-value'; v.textContent='0';
+  var sb=document.createElement('div'); sb.className='qz-gg-sub'; sb.textContent=sub;
+  wrap.appendChild(svg); wrap.appendChild(v); wrap.appendChild(sb);
+  function pt(a){ var r=(a-180)*Math.PI/180; return [100+80*Math.cos(r),100+80*Math.sin(r)]; }
+  function upd(f){ var ang=f*value/100*180, e=pt(ang), arc=svg.querySelector('#qzArc'), nd=svg.querySelector('#qzNeedle');
+    arc.setAttribute('d', f<0.01?'':'M20,100 A80,80 0 0,1 '+e[0]+','+e[1]); var n=pt(ang); nd.setAttribute('x2',100+(n[0]-100)*.9); nd.setAttribute('y2',100+(n[1]-100)*.9);
+    v.textContent=Math.round(f*value); }
+  upd(0); var st=null; function fr(t){ if(!st) st=t; var k=Math.min((t-st)/1400,1); upd(1-Math.pow(1-k,3)); if(k<1) requestAnimationFrame(fr); }
+  setTimeout(function(){ requestAnimationFrame(fr); },250);
+  setTimeout(function(){ upd(1); },1900); 
+  return wrap;
+}
+
+
+function renderResult(){
+  var A=state.answers, name=A.name?esc(A.name):'';
+  var seg=parseInt(A.seguridad,10)||5, casos=parseInt(A.casos,10)||8;
+  var dudas=Array.isArray(A.dudas)?A.dudas:[];
+  var bonus={'По-малко от 2 години':0,'От 2 до 5 години':4,'От 5 до 10 години':7,'Повече от 10 години':9}[A.anios]||4;
+  var idx=Math.max(18,Math.min(84, Math.round(seg*7.5+bonus-Math.min(dudas.length,6)*2.5)));
+  var perfil = seg<=4 ? 'Решаващ под натиск' : (seg<=7 ? 'Изграждащ системата си' : 'Иска да решава по-бързо');
+  var lista = dudas.length ? dudas : ['Екстракция или не','Клас II','Финиширане и средна линия'];
+  var items = lista.map(function(d){ var r=CONFIG.RESUELVE[d]; if(!r) return '';
+    return '<div class="qz-mi"><img loading="lazy" src="'+CONFIG.MAPAS[r.map]+'" alt="Визуална карта: '+esc(d)+'"><div><b>'+esc(d)+'</b><span>'+esc(r.r)+' · с визуална карта</span></div></div>'; }).join('');
+  var notas='';
+  if(A.alargue && A.alargue!=='Не, никога') notas+='<div class="qz-note">⏱ <b>Лечения, които се проточват:</b> Радарът за грешки в планирането показва какво удължава един случай, за да го видите още преди залепването на брекетите.</div>';
+  if(A.reaccion==='Започвам и коригирам в движение'||A.reaccion==='Решавам на момента, дори да не съм 100% сигурен') notas+='<div class="qz-note">🧭 <b>Решавате на момента:</b> с Клиничния планер в 4 етапа влизате в консултацията с вече подредени диагноза, цели и механика.</div>';
+  notas+='<div class="qz-note">📅 Виждате около <b>'+casos+' сложни случая на месец</b>: това са около <b>'+(casos*12)+' решения годишно</b>, които днес зависят от паметта Ви в момента.</div>';
+  stage.innerHTML='<div class="qz-result">'+
+    '<span class="qz-phase">Вашата клинична карта'+(name?' · '+name:'')+'</span>'+
+    '<h1 class="qz-h">'+(name?name+', Вашият профил е':'Вашият профил е')+'<br><span class="am">'+perfil+'</span></h1>'+
+    '<div id="qzGauge"></div>'+
+    '<div class="qz-vs"><div class="now"><span class="lab">Увереност днес</span><div class="v">'+idx+'/100</div></div>'+
+    '<div class="goal"><span class="lab">С Вашата система</span><div class="v">90+/100</div></div></div>'+
+    '<p class="qz-sub" style="margin-bottom:6px">Не Ви липсват знания: липсва Ви решението да е подредено и под ръка. Ето какво ще проверявате във всеки случай, който днес Ви поражда съмнение:</p>'+
+    '<div class="qz-map"><div class="qz-map-h">Къде се решава всяко съмнение</div>'+items+'</div>'+
+    notas+
+    '<button class="qz-cta" id="qzSeeOffer">Вижте достъпа си до Библията</button></div>';
+  document.getElementById('qzGauge').appendChild(gauge(idx,'Индекс на клинична увереност днес, от 100'));
+  stage.querySelectorAll('.qz-mi').forEach(function(z,k){ setTimeout(function(){ z.classList.add('in'); },600+k*140); });
+  document.getElementById('qzSeeOffer').onclick=renderSale;
+  window.scrollTo(0,0);
+}
+
+
+function renderSale(){
+  document.querySelector('#qz .qz-bar').style.display='none';
+  document.getElementById('qzTop').style.display='none';
+  var A=state.answers, name=A.name?esc(A.name):'';
+  var dudas=Array.isArray(A.dudas)&&A.dudas.length?A.dudas:[];
+  var thumbs=function(a){ return a.map(function(x){ return '<img src="'+x.img+'" alt="'+esc(x.t)+'" loading="lazy" decoding="async">'; }).join(''); };
+  var li=function(a){ return a.map(function(x){ return '<li><b>'+esc(x.t)+':</b> '+esc(x.d)+'</li>'; }).join(''); };
+  var mapsStrip=['angle','espacio','abierta','cruzada','planif'].map(function(k){ return '<img src="'+CONFIG.MAPAS[k]+'" alt="Визуална карта" loading="lazy" decoding="async">'; }).join('');
+  var priceBox='<div class="qz-price" id="ot-offer"><div class="lab">Вашият достъп днес</div>'+
+    (OLD?'<div class="old">'+esc(OLD)+'</div>':'')+
+    '<div class="now">'+(PRICE?esc(PRICE):'')+'</div>'+
+    (PCT?'<span class="off">-'+PCT+'%</span>':'')+
+    (SAVE?'<div class="note" style="margin-top:2px">Спестявате: <b>'+esc(SAVE)+'</b></div>':'')+
+    '<a class="qz-cta qz-buy" href="/checkout">ИСКАМ ДОСТЪП СЕГА</a>'+
+    '<div class="note">Еднократно плащане · Без абонамент · Веднага на имейла Ви · 7-дневна гаранция</div></div>';
+  var tst=(CONFIG.TESTIMONIALS||[]).map(function(x){
+    if(x.img) return '<div class="c"><img class="cap" src="'+x.img+'" alt="" loading="lazy"></div>';
+    return '<div class="c"><div class="who"><b>'+esc(x.name)+'</b>'+(x.place?' · '+esc(x.place):'')+'<span class="vf">✓</span></div><div class="stars" style="margin-top:8px">★★★★★</div><p class="q">«'+esc(x.text)+'»</p></div>'; }).join('');
+  var faq=CONFIG.FAQ.map(function(x){ return '<div class="it"><button class="q">'+esc(x.q)+'</button><div class="a">'+esc(x.a)+'</div></div>'; }).join('');
+  stage.style.padding='0';
+  stage.innerHTML='<div class="qz-sale">'+
+    '<div class="qz-timer">⏳ Достъпът Ви на днешната цена е запазен още <span id="qzClock">'+CONFIG.TIMER_MIN+':00</span></div>'+
+    '<div class="qz-salebody">'+
+    '<span class="qz-phase">Клиничната Ви карта е готова</span>'+
+    '<h1 class="qz-h">'+(name?name+', ето Вашата ':'Ето Вашата ')+'<span class="am">Библия на ортодонта</span></h1>'+
+    '<p class="qz-sub">Подредена по тип случай, за да решите още преди пациентът да влезе.</p>'+
+    '<div class="qz-img"><img loading="lazy" src="'+CONFIG.IMG.bundle+'" alt="Библията на ортодонта и ръководствата към нея"></div>'+
+    (dudas.length?'<p class="qz-sub" style="margin:0">Отговаря на съмненията, които отбелязахте:</p><div class="qz-chips">'+dudas.map(function(d){ return '<span>'+esc(d)+'</span>'; }).join('')+'</div>':'')+
+    '<div class="qz-sec">'+priceBox+'</div>'+
+    '<div class="qz-sec"><h2 class="qz-sec-h">Какво получавате</h2>'+
+      '<div class="qz-pack"><h3>5 клинични ръководства в PDF</h3><div class="qz-thumbs">'+thumbs(CONFIG.GUIAS)+'</div><ul class="qz-li">'+li(CONFIG.GUIAS)+'</ul></div>'+
+      '<div class="qz-pack"><h3>5 инструмента за прилагане в кабинета</h3><div class="qz-thumbs">'+thumbs(CONFIG.HERRAMIENTAS)+'</div><ul class="qz-li">'+li(CONFIG.HERRAMIENTAS)+'</ul></div>'+
+      '<div class="qz-pack"><h3>120+ визуални карти</h3><div class="qz-thumbs maps">'+mapsStrip+'</div><ul class="qz-li"><li><b>Всяка клинична тема на една страница:</b> същественото, какво да проверите и как да решите. На телефона или разпечатано в кабинета.</li><li><b>Бъдещите актуализации</b> са включени.</li></ul></div>'+
+    '</div>'+
+    (tst?'<div class="qz-sec"><h2 class="qz-sec-h">Какво казват колегите</h2><p class="qz-tst-sub"></p><div class="qz-tst" id="qzTst">'+tst+'</div>'+
+      '<div class="qz-tst-ctl"><span class="hint">Плъзнете за още</span><span><button type="button" id="qzTPrev" aria-label="Предишно">‹</button><button type="button" id="qzTNext" aria-label="Следващо">›</button></span></div></div>':'')+
+    '<div class="qz-guar"><span class="ic">🛡</span><div><b>7-дневна гаранция с прилагане.</b> Приложете го. Ако сте го приложили и не Ви е свършило работа, връщаме парите Ви.</div></div>'+
+    '<div class="qz-sec qz-faq"><h2 class="qz-sec-h">Често задавани въпроси</h2>'+faq+'</div>'+
+    '<a class="qz-cta" href="#ot-offer">ИСКАМ ДОСТЪП СЕГА ↓</a>'+
+    '<p class="qz-disc">Справочен материал за лекари по дентална медицина с подготовка по ортодонтия. Допълва клиничната преценка на специалиста, не я замества. Дигитален продукт.</p>'+
+    '</div></div>';
+  stage.querySelectorAll('.qz-buy').forEach(function(b){ b.onclick=buy; });
+  stage.querySelectorAll('.qz-faq .q').forEach(function(b){ b.onclick=function(){ b.parentElement.classList.toggle('open'); }; });
+  var tr=document.getElementById('qzTst');
+  if(tr){ var pv=document.getElementById('qzTPrev'), nx=document.getElementById('qzTNext');
+    var stepW=function(){ var c=tr.querySelector('.c'); return c?c.getBoundingClientRect().width+12:300; };
+    var upd=function(){ pv.disabled=tr.scrollLeft<2; nx.disabled=tr.scrollLeft+tr.clientWidth>=tr.scrollWidth-3; };
+    pv.onclick=function(){ tr.scrollBy({left:-stepW(),behavior:'smooth'}); }; nx.onclick=function(){ tr.scrollBy({left:stepW(),behavior:'smooth'}); };
+    tr.addEventListener('scroll',upd,{passive:true}); upd(); }
+  var total=CONFIG.TIMER_MIN*60, clock=document.getElementById('qzClock');
+  var ci=setInterval(function(){ total--; if(total<=0){ clearInterval(ci); clock.textContent='0:00'; return; }
+    var m=Math.floor(total/60), s=total%60; clock.textContent=m+':'+(s<10?'0':'')+s; },1000);
+  window.scrollTo(0,0);
+}
+
+render();
+})();
+</script>
